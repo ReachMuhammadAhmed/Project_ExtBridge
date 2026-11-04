@@ -44,7 +44,7 @@ S = {
  "M3": ("mmtests", "https://github.com/gormanm/mmtests", G, 2, "GPL-2.0 (GitHub API)", 2012, 3, '"mmtests"'),
  "B5": ("EDK2 (UEFI reference) repo", "https://github.com/tianocore/edk2", G, 1, "NOASSERTION (GitHub API)", 2011, 13, '"EDK II"'),
  # --- issue trackers (issue text is governed by platform terms, not the code licence)
- "F4": ("e2fsprogs GitHub issues", "https://github.com/tytso/e2fsprogs/issues", G, 1, "GitHub Terms govern issue text", 2011, 0, '"e2fsprogs"'),
+ "F4": ("e2fsprogs GitHub issues", "https://github.com/tytso/e2fsprogs/issues", G, 1, "GitHub Terms govern issue text", 2019, 0, '"e2fsprogs"'),  # 2026-11-04 fact-check: oldest GitHub issue 2019-02-08 (repo created 2011)
  "F5": ("OpenZFS GitHub issues", "https://github.com/openzfs/zfs/issues", G, 1, "GitHub Terms govern issue text", 2009, 4, '"OpenZFS"'),
  "F7": ("libfuse GitHub issues", "https://github.com/libfuse/libfuse/issues", G, 1, "GitHub Terms govern issue text", 2015, 1, '"libfuse"'),
  "S7": ("SPDK GitHub issues", "https://github.com/spdk/spdk/issues", G, 1, "GitHub Terms govern issue text", 2015, 133, '"SPDK"'),
@@ -59,7 +59,7 @@ S = {
  "V6": ("Firecracker GitHub issues", "https://github.com/firecracker-microvm/firecracker/issues", G, 1, "GitHub Terms govern issue text", 2017, 25, '"Firecracker" "microVM"'),
  "S8": ("Ceph issue tracker", "https://tracker.ceph.com/", D, 1, "terms not readable from here", None, 4, '"Ceph" "bug"'),
  "B6": ("GRUB bug tracker (Savannah)", "https://savannah.gnu.org/bugs/?group=grub", D, 1, "terms not verified", None, 14, '"GRUB" "bootloader"'),
- "R3": ("Launchpad: Ubuntu kernel bugs", "https://bugs.launchpad.net/ubuntu/+source/linux", D, 1, "terms not readable from here", None, 1, '"Launchpad" "bug reports"'),
+ "R3": ("Launchpad: Ubuntu kernel bugs", "https://bugs.launchpad.net/ubuntu/+source/linux", D, 1, "terms not readable from here", 2004, 1, '"Launchpad" "bug reports"'),  # 2026-11-04 fact-check: oldest Fix Released task created 2004-12-18 (Launchpad API)
  # --- mailing lists as lore.kernel.org git clones (web pages block scripts; git works)
  "L-ext4": ("linux-ext4 list (lore git, 1 epoch)", "https://lore.kernel.org/linux-ext4/git/0.git", GIT, 1, "public archive; no stated reuse licence", 2006, 19, '"Linux kernel mailing list"'),
  "L-block": ("linux-block list (lore git, 1 epoch)", "https://lore.kernel.org/linux-block/git/0.git", GIT, 1, "public archive; no stated reuse licence", 2015, 19, '"Linux kernel mailing list"'),
@@ -67,7 +67,7 @@ S = {
  "L-dri": ("dri-devel list (lore git, epochs 0-2)", "https://lore.kernel.org/dri-devel/git/0.git", GIT, 1, "public archive; no stated reuse licence", 2010, 19, '"Linux kernel mailing list"'),
  "L-kvm": ("kvm list (lore git, epochs 0-1)", "https://lore.kernel.org/kvm/git/0.git", GIT, 1, "public archive; no stated reuse licence", 2006, 19, '"Linux kernel mailing list"'),
  "L-lkml": ("LKML (lore git, epochs 0-20)", "https://lore.kernel.org/lkml/git/0.git", GIT, 1, "public archive; no stated reuse licence", None, 19, '"Linux kernel mailing list"'),
- "L-lkp": ("Kernel test robot reports, oe-lkp (lore git)", "https://lore.kernel.org/oe-lkp/git/0.git", GIT, 1, "public archive; no stated reuse licence", 2022, 0, '"kernel test robot"'),
+ "L-lkp": ("Kernel test robot reports, oe-lkp (lore git)", "https://lore.kernel.org/oe-lkp/git/0.git", GIT, 1, "public archive; no stated reuse licence", 2013, 0, '"kernel test robot"'),  # 2026-11-04 fact-check: message Date headers 2013-2026 in epoch 0 (full clone, 20,537 messages)
  # --- vulnerability / bug infrastructure
  "K6": ("syzbot upstream dashboard", "https://syzkaller.appspot.com/upstream", D, 1, "no licence stated", 2017, 78, '"syzkaller"'),
  "K8": ("NVD CVE API", "https://services.nvd.nist.gov/rest/json/cves/2.0", D, 1, "US-government data; terms page not readable from here", 1997, 12, '"National Vulnerability Database" "Linux kernel"'),
@@ -250,7 +250,7 @@ for sid in used:
     w(f"| {sid} | {n[0]} | {n[1]} | {n[2]} | {n[4]} ({n[3]}) | {n[5] or 'unverified'} | `{n[7]}` → {n[6]} |")
 w("""
 **Notes**
-- **History:** GitHub "created" dates can be later than the project's real history (e.g., the kernel mirror holds history from 2005). Lore start dates are the first message in epoch 0, measured from blob-free clones. Those clones are large (about 0.3–1.1 GB per epoch), so plan the disk space.
+- **History:** GitHub "created" dates can be later than the project's real history (e.g., the kernel mirror holds history from 2005). Lore start dates are the earliest message Date header in epoch 0. lore.kernel.org ignores `--filter=blob:none` (\"filtering not recognized by server\"), so clones are full: about 0.3–1.1 GB per epoch (oe-lkp epoch 0: 709 MB), so plan the disk space.
 - **OpenAlex counts** are phrase searches over titles and abstracts. They are a rough saturation signal only, never proof of a gap. Generic names (e.g., "systemd", "runc") also match papers that merely mention the tool.
 - **Licence 1** means the reuse terms couldn't be confirmed or only platform terms apply. Report mined data in aggregate (Stage 2 ethics note), and confirm the terms before Stage 6.
 - Six cells now use lore git clones: code review in file systems, storage, memory management, kernel code, drivers, and virtualization (kvm). Two more do too: scheduling CI and kernel performance (kernel test robot reports). Earlier, these lists were unreachable through their web pages. fstests, the stable queue and rt-tests are reached as git clones.

@@ -10,16 +10,17 @@ Tags: [user] = stated by Ahmed · [repo] = verified from files at commit c21b70e
 - Skills: C, C++, Python, SQL, React, statistics; builds with AI coding tools. Background: built ExtBridge, a cross-platform ext2 file-system engine (OS course project). It may inform the topic but must not limit it.
 
 ## 2. Status [repo]
-- No research topic, problem or research question exists yet. problem_log.csv, search_log.csv, literature_matrix.csv and claims_register.md have 0 data rows; idea_cards/ holds only TEMPLATE.md.
+- No research topic, problem or research question exists yet in topic-discovery/. problem_log.csv and search_log.csv have 0 data rows; idea_cards/ holds only TEMPLATE.md. literature_matrix.csv and claims_register.md hold 3 background entries each (the citation-checked handover sources, 2026-11-04), not tied to any candidate.
+- research/ (repository root) holds earlier AI-proposed pilots, Directions A (ext readers disagree on logical contents) and B (ext2 deletion artefacts vs. kernel driver), with a pre-registration and pilot outputs. The student rejected both on the merits of the idea (decisions.md, 2026-11-04). Do not revive them.
 
 | Stage | Status |
 |---|---|
 | 0 Setup | AI side done (6 AI test runs passed). Gate OPEN: the student's own test run and the Scholar Sidekick test are not recorded |
-| 1 Data map | Short list of 12 cells, 11 distinct sources, in intersection_map.md. AI-side gate passed. Gate OPEN: the student hasn't opened the sources. Licence scores of 1 must be confirmed before Stage 6 |
+| 1 Data map | Short list of 12 cells, 10 distinct sources, in intersection_map.md (regenerated 2026-11-04 after history facts were corrected; the list changed, see decisions.md). AI-side gate passed. Gate OPEN: the student hasn't opened the sources. Licence scores of 1 must be confirmed before Stage 6 |
 | 2–8 | Not started |
 
 ## 3. Where things live [repo]
-- Repository ReachMuhammadAhmed/Project_ExtBridge, branch claude/festive-cori-0z1tw1, folder topic-discovery/. The branch is pushed and clean. This is the OS course project repository.
+- Repository ReachMuhammadAhmed/Project_ExtBridge, working branch claude/upbeat-ride-eh3nc7 (from 2026-11-04; claude/festive-cori-0z1tw1 holds the history up to cad5349), folder topic-discovery/. The repository contains only research/ and topic-discovery/; no ExtBridge code.
 - methodology.md: the stages, gates and templates. Follow it as written.
 - QUALITY_CHECKLIST.md: 15 failure patterns, checked at the gates of Stages 3, 5B, 6 and 8.
 - decisions.md: the gate log and decision record. ai_use_log.md: AI use, for the IEEE disclosure.
@@ -67,4 +68,4 @@ Tags: [user] = stated by Ahmed · [repo] = verified from files at commit c21b70e
 - No methodology edits unless a gate actually fails; record the reason in decisions.md.
 - The student does the "AI vs. you" steps; AI claims stay unverified until checked.
 - One working session with the repository attached; don't relay outputs between several chats.
-- Superseded, do not use: prompts from the previous chat, the 81-cell Stage 1 result, and earlier methodology versions.
+- Superseded, do not use: prompts from the previous chat, the 81-cell Stage 1 result, earlier methodology versions, and research/ (Directions A and B, rejected by the student on the merits).
