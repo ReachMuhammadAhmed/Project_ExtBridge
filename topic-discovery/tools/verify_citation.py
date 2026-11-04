@@ -22,7 +22,10 @@ only some authors (e.g., the first one), but every name you list must appear in
 the record, and the first name you list must be the record's first author.
 
 Optional: set CROSSREF_MAILTO=<your email> to use Crossref's "polite" pool.
-Exit code: 0 = VERIFIED, 1 = NOT VERIFIED, 2 = record not found / error.
+Papers with no DOI or arXiv ID: use --dblp (title search on dblp). If dblp has no match or is
+unreachable, the script prints [manual-check]: verify against the official proceedings page.
+
+Exit code: 0 = VERIFIED, 1 = NOT VERIFIED, 2 = record not found / error, 3 = [manual-check] needed.
 """
 import argparse
 import difflib
@@ -119,6 +122,28 @@ def record_from_arxiv(aid):
     }
 
 
+def record_from_dblp(title):
+    """Search dblp by title (for papers with no DOI or arXiv ID). Returns the best-matching record."""
+    url = "https://dblp.org/search/publ/api?" + urllib.parse.urlencode({"q": title, "format": "json", "h": 10})
+    data = json.loads(fetch(url))  # raises ValueError (JSONDecodeError) if dblp returns an anti-bot HTML page
+    hits = ((data.get("result") or {}).get("hits") or {}).get("hit") or []
+    if not hits:
+        raise LookupError("dblp returned no match for this title")
+    best = max(hits, key=lambda h: difflib.SequenceMatcher(None, norm(title), norm(h["info"].get("title", ""))).ratio())
+    info = best["info"]
+    authors = (info.get("authors") or {}).get("author") or []
+    if isinstance(authors, dict):
+        authors = [authors]
+    names = [re.sub(r"\s+\d{4}$", "", a.get("text", "")) for a in authors]  # dblp disambiguation suffix, e.g. "Jane Doe 0001"
+    return {
+        "source": "dblp",
+        "title": info.get("title", ""),
+        "authors": [n.split()[-1] for n in names if n],
+        "years": {int(info["year"])} if info.get("year") else set(),
+        "venue": info.get("venue", "") if isinstance(info.get("venue"), str) else " | ".join(info.get("venue") or []),
+    }
+
+
 def lookup(raw_id):
     kind, ident = classify_id(raw_id)
     if kind == "arxiv":
@@ -154,17 +179,31 @@ def check(rec, title, authors, year, venue):
 
 def main():
     ap = argparse.ArgumentParser(description="Citation verification rule (methodology Stage 0).")
-    ap.add_argument("--id", required=True, help="DOI or arXiv ID (URLs and prefixes accepted)")
+    ap.add_argument("--id", help="DOI or arXiv ID (URLs and prefixes accepted). Omit it and use --dblp for papers without one.")
     ap.add_argument("--title", required=True)
     ap.add_argument("--authors", required=True, help="family names separated by ';', first author first")
     ap.add_argument("--year", required=True, type=int)
     ap.add_argument("--venue", help="claimed venue (journal/conference). If omitted, check venue manually.")
     ap.add_argument("--json", action="store_true", help="print machine-readable result")
+    ap.add_argument("--dblp", action="store_true",
+                    help="paper has no DOI/arXiv ID: look it up on dblp by title; if not found or unreachable, flag [manual-check]")
     a = ap.parse_args()
+    if not a.id and not a.dblp:
+        ap.error("give --id, or --dblp for a paper without a DOI or arXiv ID")
 
-    try:
+    if a.dblp and not a.id:
+        try:
+            rec = record_from_dblp(a.title)
+        except (urllib.error.URLError, LookupError, ValueError, KeyError) as e:
+            print(f"dblp lookup failed: {e}\n"
+                  "=> [manual-check]: verify title, authors, year and venue against the official proceedings page "
+                  "before using this paper, and record the result in the literature matrix.")
+            sys.exit(3)
+        a.id = "dblp:" + rec["title"][:60]
+    else:
+      try:
         rec = lookup(a.id)
-    except (urllib.error.URLError, LookupError, ValueError, KeyError, ET.ParseError) as e:
+      except (urllib.error.URLError, LookupError, ValueError, KeyError, ET.ParseError) as e:
         print(f"RECORD NOT FOUND / ERROR for {a.id}: {e}\n"
               "=> NOT VERIFIED. Keep the tag [AI-unverified]; check the ID at https://doi.org or https://arxiv.org.")
         sys.exit(2)

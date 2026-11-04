@@ -29,10 +29,12 @@ Don't skip gates. Most wasted effort comes from skipping one.
    - `literature_matrix.csv`
    - `claims_register.md`
    - `decisions.md`
-2. Set up free accounts and keys:
+   - `ai_use_log.md` (every use of an AI tool; needed for the IEEE AI-use disclosure in Stage 8)
+2. Set up free accounts and keys (details and current status in `SETUP_KEYS.md` and `TOOLS.md`):
    - OpenAlex API key (free; without one, requests share a small daily per-IP budget);
-   - Semantic Scholar API key (free on application; unauthenticated requests are often rate-limited);
-   - CORE API key (free; aggregates university repository full texts).
+   - Scholar Sidekick key (free; used by the citation verification rule below);
+   - Semantic Scholar API key (free on application; while it is pending, OpenAlex covers search and citation chasing);
+   - CORE: works without a key at a low rate limit (aggregates university repository full texts).
 3. Install a reference manager (Zotero is free). Every paper you rely on goes into it with its DOI.
 4. Write down the **citation verification rule** (below) and the **evidence tags** used in every document:
    - `[read-full]`: you read the full text yourself;
@@ -40,14 +42,21 @@ Don't skip gates. Most wasted effort comes from skipping one.
    - `[secondary]`: from a blog, summary or someone else's description;
    - `[AI-unverified]`: produced by the AI assistant and not yet checked.
 5. *Optional:* if you want to run a small local model, install a local runner such as llama.cpp or Ollama (both free). Check your RAM first: quantized 7B-parameter models typically need about 8 GB *(approximate; verify for your model)*.
+6. Read `QUALITY_CHECKLIST.md` (15 failure patterns, each checked at a named gate) and `TOOLS.md` (every tool, its free terms and the stage that uses it).
 
-**Citation verification rule (applies everywhere).** A reference may be used only after:
-1. its DOI (or arXiv ID) resolves at doi.org, Crossref or arXiv; and
-2. the title, authors, year and venue *all* match that record.
+**Citation verification rule (applies everywhere).** A reference may be used, or entered into the literature matrix, only after:
+1. its DOI (or arXiv ID) resolves at doi.org, Crossref or arXiv;
+2. the title, authors, year and venue *all* match that record; and
+3. it has not been retracted.
 
-AI-produced references stay tagged `[AI-unverified]` until both checks pass. A free tool that automates the match is Scholar Sidekick's citation verifier *(free tier; limits may change)*. Crossref's free API can be checked by hand.
+Check it in this order:
+- **Primary: Scholar Sidekick.** Run its citation verification (the verdict must be "matched") and its retraction check (see `TOOLS.md`).
+- **Fallback: `tools/verify_citation.py`**, when Scholar Sidekick is unavailable or its quota is used up. It checks Crossref, DataCite and arXiv; check retraction status on the publisher's page by hand.
+- **No DOI or arXiv ID** (common for USENIX and some workshop papers): run `tools/verify_citation.py --dblp`, which looks the paper up on dblp and compares the fields. If dblp doesn't find it or can't be reached, tag the paper `[manual-check]` and verify it against the official proceedings page before using it.
 
-**Sources and tools.** OpenAlex, Semantic Scholar, CORE, Crossref, arXiv, Zotero, Git.
+AI-produced references stay tagged `[AI-unverified]` until these checks pass.
+
+**Sources and tools.** OpenAlex, Scholar Sidekick, Semantic Scholar, CORE, Crossref, arXiv, dblp, Zotero, Git.
 
 **Output artifact.** A working folder with empty logs, active keys and the verification rule written down.
 
@@ -83,24 +92,37 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
 2. For each OS concern, list the **artifacts that exist publicly**: source code and history, bug reports, test suites, configuration files, logs and traces, crash reports, mailing-list discussions, CVE records.
 3. Mark each grid cell (concern × activity) with a **data availability note**: which public artifact would let you run experiments there. Leave the AI-method axis open for now. Methods are chosen later, by the shape of the data (Stage 3).
 4. Shade cells that have no public data source. They're out of scope for a laptop-only, single-author project.
+5. **Score each remaining cell's data usability**, 0–2 per criterion (maximum 10):
+
+   | Criterion | 0 | 1 | 2 |
+   |---|---|---|---|
+   | Unit of analysis | Unclear | Definable with extra work | Clear (e.g., one bug report, one commit, one drive-day) |
+   | Labels or ground truth | None | Heuristic only (e.g., keyword matching) | Recorded in the data (e.g., fix commits, issue state, failure flags, CVE fields) |
+   | History | Under 1 year | 1–3 years | 3 years or more |
+   | Licence for research use | Prohibits research use (**drop the cell**) | Terms of service only, or reuse unclear (confirm before Stage 6) | Explicit open licence, public domain, or stated research permission |
+   | Mining saturation (OpenAlex count of papers naming the source) | Top third of counts (heavily mined) | Middle third | Bottom third |
+
+6. **Short-list the 8–12 highest-scoring cells** with a score of at least 6. On ties, prefer a cell whose source is not yet on the short list, then the less-mined source (lower OpenAlex count). Count each source **at most twice**; further cells from the same source become alternates, so the short list doesn't rest on one dataset. Report the number of **distinct sources** behind the short list, not just the number of cells.
 
 *Illustration (shape only, not a recommended topic):* the cell "file systems × testing" might list artifacts such as a kernel file-system test suite's history, public bug reports, and crash-consistency bug-fix commits.
 
 **Sources and tools.**
 - Kernel source and git history (git.kernel.org, elixir.bootlin.com);
+- kernel mailing lists as **lore.kernel.org git clones**, one list at a time (see `TOOLS.md`);
 - GitHub;
 - public issue trackers;
 - public datasets: drive-health statistics, cluster traces, I/O trace repositories. *Some trace repositories require free registration; verify each one.*
 
-**Output artifact.** `intersection_map.md`: the grid with data-availability notes. Expect around 10–20 usable cells.
+**Output artifact.** `intersection_map.md`: the grid with data-availability notes, the usability scoring table, and the short list of 8–12 cells with their distinct sources.
 
 **Exit criteria (gate).**
-- **Proceed** if at least 8 cells have a named, accessible public data source that you've opened at least once.
-- **Reshape** if fewer: broaden the OS concerns or SE activities.
+- **Proceed** if 8–12 cells score at least 6 on data usability, none scores 0 on licence, and you've opened each short-listed source at least once. State how many distinct sources the short list uses.
+- **Reshape** if fewer than 8 qualify: look for better sources for the weak cells (labels, longer history), or broaden the OS concerns or SE activities.
 
 **Common mistakes.**
 - Filling the grid from what *sounds* researchable. Catch it: every cell must name a specific URL or dataset you actually opened.
 - Choosing the AI method first. Catch it: the AI axis stays blank until Stage 3.
+- Counting cells that only passed because a URL loaded, or many cells that all rest on one source. Catch it: the usability score and the distinct-source count.
 
 **AI vs. you.**
 - The AI can propose artifact sources per cell and draft the grid.
@@ -119,10 +141,10 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
 - If your venue or university requires ethics review for mining human-generated data, follow that process.
 
 **Activities, in order**
-1. For each usable grid cell, search **practice sources** for recurring pain points:
+1. For each short-listed cell (Stage 1), search **practice sources** for recurring pain points:
    - **Issue trackers:** GitHub issues in systems projects; Linux kernel Bugzilla; distribution bug trackers. Filter by labels or words such as "regression", "flaky", "data corruption", "performance", "hang", "misconfiguration".
    - **Kernel bug infrastructure:** the syzbot dashboard of automatically found kernel bugs (https://syzkaller.appspot.com/upstream, per the [official syzkaller documentation](https://github.com/google/syzkaller/blob/master/docs/syzbot.md)). Look at which bug *classes* stay open longest, or recur.
-   - **Mailing lists and LWN:** threads where developers say something is hard to test, diagnose or maintain. LWN's subscriber-only articles become free to everyone one week after publication (per the [LWN FAQ](https://lwn.net/op/FAQ.lwn)).
+   - **Mailing lists and LWN:** threads where developers say something is hard to test, diagnose or maintain. For scripted searches and counts, clone a single list from lore.kernel.org as a git repository (one list at a time; see `TOOLS.md`). LWN's subscriber-only articles become free to everyone one week after publication (per the [LWN FAQ](https://lwn.net/op/FAQ.lwn)).
    - **CVE/NVD/OSV:** recurring weakness types in OS components.
    - **Incident postmortems:** public collections of postmortems; company engineering blogs.
    - **Developer surveys and Q&A sites:** recurring questions on Unix & Linux Stack Exchange or Server Fault *(dataset dump availability has changed recently; verify)*.
@@ -130,12 +152,12 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
 2. For every candidate problem, record a **problem log** entry (template below) with:
    - a short problem statement in practitioners' terms;
    - **≥2 independent evidence items, at least one from practice** (not a research paper), each with a link and a short verbatim quote;
-   - frequency and cost indicators: number of related issues, how long they stay open, affected users, severity, developer effort mentioned;
+   - frequency and cost indicators: number of related issues, how long they stay open, affected users, severity, developer effort mentioned. For code history, count fix commits with PyDriller, filtered to the subsystem path (e.g., `fs/ext4/`; see `TOOLS.md`);
    - who suffers: kernel developers, sysadmins, application developers, test engineers.
 3. Use papers at this stage **only as background**: to understand a term or how something works. Don't harvest "limitations" sections.
 4. Merge duplicates. Write each problem as a *problem*, not a solution. "Developers can't tell which X will fail" is a problem; "use ML to predict X" is a solution.
 
-**Sources and tools.** GitHub search (free; the code-search interface needs a login), kernel Bugzilla, syzbot, lore.kernel.org (works in a browser; may block scripts), LWN, NVD/CVE/OSV APIs (free), public postmortem collections, IEEE conference calls for papers.
+**Sources and tools.** GitHub search (free; the code-search interface needs a login), kernel Bugzilla, syzbot, lore.kernel.org (in a browser, or as git clones of single lists for scripted counts), PyDriller, LWN, NVD/CVE/OSV APIs (free), public postmortem collections, IEEE conference calls for papers.
 
 **Output artifact.** `problem_log.csv` with about 10–25 problems, each with evidence links.
 
@@ -163,7 +185,7 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
 **Purpose.** Convert evidenced problems into **answerable research questions**, choosing the AI method by the data, not by fashion, and blocking generic "apply an LLM to X" ideas.
 
 **Activities, in order**
-1. For each problem that passed Stage 2, write 2–4 research questions using these forms:
+1. For each problem that passed Stage 2, **write the first research question yourself, before involving the AI.** AI drafts tend to repeat the same ideas, and seeing them first anchors you. The AI then only adds variants (2–4 questions in total), using these forms:
    - **Characterize:** what are the properties, causes or patterns of X? (An empirical study.)
    - **Predict/detect:** can X be predicted or detected from data Y, and how well, compared with baseline B?
    - **Prioritize/optimize:** can search or ML choose among options for X better than current practice?
@@ -177,7 +199,7 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
    | Large discrete configuration or test space | Search-based SE, Bayesian optimization |
    | Short text (bug titles, commit messages) | Classic IR/NLP first; a small local model only if classic methods clearly fail |
 
-3. Apply three **anti-generic tests** to each idea. Fail any one and you must reshape or drop:
+3. The AI runs three **anti-generic tests** on each idea, and you check its results. Fail any one and you must reshape or drop:
    - **Engineer-substitution test:** if a careful engineer with a simple script and little effort could do the same, it's an engineering task, not research.
    - **LLM-swap test:** if the idea reads "use an LLM to do X", ask what *new knowledge* results apart from "the LLM did/didn't do X well". If none, drop it.
    - **Baseline test:** name the non-AI baseline that practitioners use today. No baseline means no measurable contribution.
@@ -201,6 +223,8 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
 - AI method justified by the data shape;
 - contribution type.
 
+The card must also pass `QUALITY_CHECKLIST.md` item 4 (generic or repeated ideas).
+
 **Drop** cards that fail an anti-generic test.
 
 **Common mistakes.**
@@ -208,8 +232,8 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
 - **Research questions that can't fail.** Catch it: each question must have an outcome that would count as a negative result.
 
 **AI vs. you.**
-- The AI can draft question variants, fill idea cards and propose baselines.
-- You must apply the three tests yourself and confirm that each baseline really reflects current practice, with evidence from Stage 2.
+- The AI only adds variants to the research question you wrote, runs the three anti-generic tests, fills idea cards and proposes baselines.
+- You must write the first research question for each problem yourself, check the anti-generic test results, and confirm that each baseline really reflects current practice, with evidence from Stage 2.
 
 ---
 
@@ -252,6 +276,8 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
 
 **Purpose.** Try hard to prove each shortlisted gap **false**. A gap counts only if a structured search fails to find prior work. Two passes keep the reading load manageable: a lighter Pass 1 across all shortlisted candidates, then the full protocol only for the strongest 2.
 
+**From this stage onward**, subscribe to the free arXiv email alerts for cs.SE and cs.OS (see `TOOLS.md`). Screen each alert for papers close to your candidates, and log matches in `search_log.csv`.
+
 ### Pass 1: all shortlisted candidates (3–5)
 
 **Activities, in order (per candidate)**
@@ -260,8 +286,8 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
    - Include older and community-specific terms (e.g., the same idea named differently by systems, SE and ML researchers).
    - Write it into `search_log.csv`.
 2. **Multi-database search.** Run combined queries in OpenAlex, Semantic Scholar, arXiv, Google Scholar (browser), dblp (browser) and scholar.archive.org. Log every query: source, string, date, number of hits, number screened, number kept.
-3. **One snowballing round.** Pick the 3–5 closest papers found so far. Do one round of backward snowballing (their references) and forward snowballing (papers citing them, via Semantic Scholar, OpenAlex or Google Scholar's "Cited by").
-4. Enter the relevant papers (typically 10–15 per candidate) into the literature matrix, with evidence tags and the `overlap with my RQ` field filled from title and abstract.
+3. **One snowballing round.** Pick the 3–5 closest papers found so far. Do one round of backward snowballing (their references) and forward snowballing (papers citing them, via Semantic Scholar, OpenAlex or Google Scholar's "Cited by"). Inciteful (see `TOOLS.md`) builds the citation network around a seed paper and helps with both directions.
+4. Enter the relevant papers (typically 10–15 per candidate) into the literature matrix, each only after it passes the citation verification rule (Scholar Sidekick verification and retraction check first), with evidence tags and the `overlap with my RQ` field filled from title and abstract.
 
 **Pass 1 gate (applied to each candidate, then ranking).**
 - **Drop** a candidate if any paper or tool found so far answers its research question with comparable data and method.
@@ -276,7 +302,7 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
 ### Pass 2: top 2 candidates only (full protocol)
 
 **Activities, in order (per candidate)**
-1. **Neighboring fields.** Repeat key queries for analogous domains where the *same engineering problem* appears, e.g. database systems, distributed systems, embedded systems, compilers, networking.
+1. **Neighboring fields.** Repeat key queries for analogous domains where the *same engineering problem* appears, e.g. database systems, distributed systems, embedded systems, compilers, networking. Inciteful's citation network around your closest papers also surfaces work from neighbouring fields that uses different terms.
 2. **Citation chasing to saturation.** Continue backward and forward snowballing from the closest papers. Stop when two consecutive rounds add nothing relevant.
 3. **Venue sweep.** Scan the last 3 years of tables of contents of the 3–4 most likely venues, because keyword search misses papers with unusual titles. Sources:
    - conf.researchr.org: accepted-paper lists for major SE conferences;
@@ -291,7 +317,7 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
    - mailing-list threads proposing a fix.
 
    A practical solution with no paper still weakens a gap.
-5. **Adversarial search.** Ask the AI to write the abstract of the paper that would make your gap false. Then search using *that abstract's wording*.
+5. **Adversarial search.** Ask the AI to write the abstract of the paper that would make your gap false. Then search using *that abstract's wording*. Also run it through Undermind's free tier: use it only here, for the top 2 candidates, because its monthly quota is small (see `TOOLS.md`). Its results go through the citation verification rule like any other source.
 6. **Complete the literature matrix** (template below) for every relevant paper. Mark each with the evidence tags. Only `[read-full]` papers can be used to support the gap.
 
 **Free routes to IEEE papers (and ACM)**, roughly in order of reliability:
@@ -308,7 +334,7 @@ AI-produced references stay tagged `[AI-unverified]` until both checks pass. A f
 
 Don't use unauthorised copy sites. Their legal status is a problem, and citing from them creates risk.
 
-**Sources and tools.** All of the above, plus Zotero for organising papers.
+**Sources and tools.** All of the above, plus Zotero for organising papers, Scholar Sidekick (citation rule), Inciteful, Undermind (Pass 2 only) and arXiv alerts. Terms and limits are in `TOOLS.md`.
 
 **Output artifact.**
 - `search_log.csv`: complete for both passes;
@@ -363,12 +389,12 @@ If a Pass 2 candidate drops, promote the next-ranked Pass 1 survivor into Pass 2
    - Who would cite this, and why?
    - What would a reviewer in the closest paper's community say is missing?
 5. *Strongly recommended:* get an outside check by sending the gap statement to one or two people with expertise (a lecturer, or an author of a closest paper). Ask: "Do you know prior work that already does this?"
-6. Update `claims_register.md` (template below): add every factual claim the gap statement makes, with its source, evidence tag and verification status.
+6. Update `claims_register.md` (template below): add every factual claim the gap statement makes, with its source, evidence tag and verification status. For each claim, record the page and the supporting quote, and check against the source whether it really `supports` the claim (yes / partial / no). Only claims marked `yes` may stay in the gap statement.
 
 **Output artifact.** `gap_statement.md`, plus the red-team log.
 
 **Exit criteria (gate).**
-- **Proceed** if every red-team point has a documented answer, the "why does this gap exist?" reason is supported by evidence, and the difference from each closest work is in kind.
+- **Proceed** if every red-team point has a documented answer, the "why does this gap exist?" reason is supported by evidence, the difference from each closest work is in kind, and `QUALITY_CHECKLIST.md` items 2, 5, 6 and 7 pass.
 - **Reshape** if the difference is only one of degree.
 - **Drop** if the red-team finds prior work you can't distinguish your idea from.
 
@@ -397,25 +423,26 @@ If a Pass 2 candidate drops, promote the next-ranked Pass 1 survivor into Pass 2
 
    Commit it with a date (Git, or a free OSF registration).
 2. Build the **smallest experiment** that can show the effect:
-   - a subset of the data (e.g., one project, one subsystem or one year);
+   - a subset of the data (e.g., one project, one subsystem or one year). For commit history, PyDriller can extract commits filtered by subsystem path (see `TOOLS.md`);
    - the baseline from the idea card;
    - your method in its simplest form.
 3. **Check for pitfalls before trusting results:**
    - data leakage (use time-based splits for anything involving history);
    - class imbalance (report precision, recall and F1 or PR-AUC, not only accuracy);
    - a trivial baseline (random, or majority class);
-   - manual inspection of 20–30 labelled examples to confirm labels mean what you think.
+   - **hand-labelled agreement check** for any heuristic labels (e.g., "fix" inferred from commit-message keywords). Label a random sample of at least 50 items yourself without looking at the heuristic label, then report agreement and Cohen's κ against the heuristic. Set the minimum (e.g., κ ≥ 0.6) in the pre-registration, and fix the heuristic if it's missed;
+   - **sampling-bias note**: state which projects, periods and item types your data over- or under-represents. For example, only fixed bugs have fix commits, so unfixed bugs are invisible.
 4. Run the experiment, record the raw outputs, and compare against the threshold.
 5. Note the **laptop cost**: runtime, memory and data size. Extrapolate to the full study.
 
 *Illustration of a pre-registered threshold:* "Proceed if the method beats the best baseline by ≥5 F1 points on a time-based split; drop if within 2 points." The numbers are examples; set yours from the idea card.
 
-**Sources and tools.** Python (pandas, scikit-learn), SQL for data handling, C/C++ where systems interaction is needed; Git for the dated pre-registration.
+**Sources and tools.** Python (pandas, scikit-learn), PyDriller for commit history, SQL for data handling, C/C++ where systems interaction is needed; Git for the dated pre-registration.
 
 **Output artifact.** `pilot_report.md`: the plan, the results, raw outputs, the pitfall checks, the resource cost and the gate decision.
 
 **Exit criteria (gate).**
-- **Proceed** if the threshold is met, the pitfall checks pass and the full study fits on a laptop.
+- **Proceed** if the threshold is met, the pitfall checks pass, the full study fits on a laptop, and `QUALITY_CHECKLIST.md` items 8–12 pass.
 - **Reshape** if the signal is weak but explicable (e.g., a better feature or data source exists): rerun once with a *new* pre-registration.
 - **Drop** if the kill criterion triggers, or if the data can't support the question.
 
@@ -439,6 +466,7 @@ If a Pass 2 candidate drops, promote the next-ranked Pass 1 survivor into Pass 2
    - **IEEE-sponsored** conferences are run by IEEE.
    - **Technically co-sponsored** ones are run by others under IEEE's technical oversight; their quality varies more.
    - Avoid events whose only credential is "proceedings in IEEE Xplore", without a credible programme committee.
+   - Look up each venue's tier in the ICORE conference portal, and its upcoming deadlines on se-deadlines.github.io (see `TOOLS.md`). Both are aids only; the official call for papers is authoritative.
 2. Keep venues whose **current call for papers** lists your topic. Record:
    - track types: full, short, new ideas, tool/demo, student/doctoral;
    - page limits;
@@ -513,11 +541,13 @@ Verify each named venue's scope and sponsorship yourself.
    - the gate history of every candidate, including why each dropped one was dropped.
 5. Freeze the research questions and evaluation plan with a dated commit or a free OSF pre-registration.
 6. Update `claims_register.md` so every factual claim in the decision record and the planned paper has a source, an evidence tag and a verification status; resolve or remove unverified claims before writing the paper.
+7. Draft the **IEEE AI-use acknowledgment** from `ai_use_log.md`. IEEE requires authors to disclose AI-generated content in the paper; the current wording and placement are in `TOOLS.md`. Name each AI system, what it produced (text, code, figures) and the sections where it was used.
 
 **Output artifact.** `decisions.md`, plus the frozen evaluation plan.
 
 **Exit criteria.**
 - One topic with a written gap statement (5B), a pilot passing its pre-registered threshold (6), a venue dossier (7), and a complete decision record.
+- All 15 items in `QUALITY_CHECKLIST.md` pass, and the AI-use acknowledgment is drafted.
 
 **Common mistakes.**
 - **Picking the easiest topic rather than the best-validated one.** Catch it: rank by rubric score; difficulty is recorded separately, not as a hidden weight.
@@ -647,14 +677,17 @@ Residual risk (unknown or in-progress work):
 
 ### 7. Claims register (`claims_register.md`)
 
-**Purpose:** a running list of every factual claim the paper will make, each with its source, its evidence tag, and whether it has been verified. Nothing goes into the paper unless it is in this register and verified.
+**Purpose:** a running list of every factual claim the paper will make, each with its source, its evidence tag, and whether it has been verified. Nothing goes into the paper unless it is in this register and verified. Every claim behind a gap statement must be checked against its source; only claims with `supports = yes` may be used.
 
 | Field | Content |
 |---|---|
 | `claim_id` | C-001 |
 | `claim` | The claim, worded as it will appear in the paper |
 | `type` | prior work / problem evidence / data or dataset fact / tool status / number or statistic |
-| `source` | Verified citation (with page or section) or URL |
+| `source` | Verified citation or URL |
+| `page` | Page, section or line in the source |
+| `quote` | The exact sentence(s) in the source that support the claim |
+| `supports` | yes / partial / no: does the quoted source really support the claim as worded? |
 | `evidence_tag` | read-full / read-abstract / secondary / AI-unverified |
 | `verified` | Y/N, date, and how (citation verifier, full text read, URL opened) |
 | `used_in` | gap statement / paper section / decision record |
@@ -680,6 +713,18 @@ Main risks and mitigations:
 Why each other candidate was dropped:    [see gate log]
 Frozen on (commit hash or OSF link):
 ```
+
+### 9. AI-use log (`ai_use_log.md`)
+
+| Field | Content |
+|---|---|
+| `date` | Date of use |
+| `stage` | Stage number |
+| `tool_model` | AI tool and model/version (e.g., the assistant's name and model ID) |
+| `task` | What you asked it to do |
+| `output_type` | text / code / figure / search / analysis |
+| `checked_or_changed` | What you verified or rewrote yourself |
+| `used_in` | Where the output ended up (file, paper section) |
 
 ---
 
@@ -707,7 +752,7 @@ Place each candidate on this ladder honestly. Only levels 3 and 4 should be sele
 
 ## Notes on sources whose status is uncertain
 - **Verified reachable (November 2026):** OpenAlex (free key), arXiv, Crossref, scholar.archive.org, conf.researchr.org, the IEEE Computer Society Digital Library (tables of contents and abstracts), USENIX proceedings, OpenReview, NVD/CVE/OSV.
-- **Free, but rate limits or key requirements may change:** Semantic Scholar (key recommended), CORE (free key), Unpaywall (contact email in requests), Scholar Sidekick (free tier).
+- **Free, but rate limits or key requirements may change:** Semantic Scholar (key pending; OpenAlex covers its role meanwhile), CORE (works without a key at a low rate limit), Unpaywall (contact email in requests), Scholar Sidekick (free tier).
 - **Verify the current status yourself:**
   - IEEE's author-posting policy wording;
   - Stack Exchange data-dump availability;

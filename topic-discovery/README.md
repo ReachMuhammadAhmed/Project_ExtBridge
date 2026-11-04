@@ -13,6 +13,10 @@ Working folder for the research-topic discovery methodology. Start with `methodo
 | `literature_matrix.csv` | 5A | Papers found, with evidence tags |
 | `claims_register.md` | 5B, 8 | Every factual claim the paper will make, with verification status |
 | `decisions.md` | all | Gate log and the final decision record |
-| `intersection_map.md` | 1 | OS concern × SE activity grid with verified public data sources |
+| `ai_use_log.md` | all | Every AI use, for the IEEE AI-use acknowledgment (Stage 8) |
+| `QUALITY_CHECKLIST.md` | 3, 5B, 6, 8 | 15 failure patterns, checked at the named gates |
+| `TOOLS.md` | all | Every tool: stage, purpose, verified free terms, status |
+| `intersection_map.md` | 1 | Grid, usability scoring table and short list (generated) |
+| `tools/score_stage1.py` | 1 | Regenerates `intersection_map.md` from the recorded source facts |
 
-Status: Stage 0 (AI side) and Stage 1 complete; Stage 2 not started.
+Status: Stage 0 (AI side) and Stage 1 re-cut complete; Stage 2 not started.
