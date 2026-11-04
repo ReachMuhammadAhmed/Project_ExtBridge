@@ -1,0 +1,65 @@
+
+### c01_crosslink  e2fsck_exit=4  accepted=['7zip', 'debugfs', 'grub', 'kernel', 'tsk']  rejected=[]
+  (no semantic disagreement among accepting readers)
+
+### c02_hidden_entry  e2fsck_exit=4  accepted=['7zip', 'debugfs', 'grub', 'kernel', 'tsk']  rejected=[]
+  DIFF [UNKNOWN]: kernel=absent,0,; debugfs=absent,0,; grub=absent,0,; tsk=absent,0,; 7zip=d,0,
+  DIFF [UNKNOWN]/16: kernel=absent,0,; debugfs=absent,0,; grub=absent,0,; tsk=absent,0,; 7zip=f,200,5bddadb0cda6
+
+### c03_size_mismatch  e2fsck_exit=0  accepted=['7zip', 'debugfs', 'grub', 'kernel', 'tsk']  rejected=[]
+  (no semantic disagreement among accepting readers)
+
+### c04_links_zero  e2fsck_exit=4  accepted=['7zip', 'debugfs', 'grub', 'kernel', 'tsk']  rejected=[]
+  DIFF a.txt: kernel=err:Structure needs cleaning,0,; debugfs=f,550,fc4a0bb890cd; grub=f,550,fc4a0bb890cd; tsk=f,550,fc4a0bb890cd; 7zip=f,550,fc4a0bb890cd
+
+### c05_bitmap_free  e2fsck_exit=4  accepted=['debugfs', 'grub', 'kernel', 'tsk']  rejected=['7zip']
+  (no semantic disagreement among accepting readers)
+
+### c06_duplicate_name  e2fsck_exit=4  accepted=['7zip', 'debugfs', 'grub', 'kernel', 'tsk']  rejected=[]
+  DIFF a.txt: kernel=f,550,fc4a0bb890cd; debugfs=f,550,2c2115757da9; grub=f,550,fc4a0bb890cd; tsk=f,550,2c2115757da9; 7zip=f,550,2c2115757da9
+
+### c07_filetype_mismatch  e2fsck_exit=4  accepted=['debugfs', 'grub', 'kernel', 'tsk']  rejected=['7zip']
+  DIFF a.txt: kernel=f,550,fc4a0bb890cd; debugfs=f,550,fc4a0bb890cd; grub=d,0,; tsk=d,0,
+  DIFF a.txt/ha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-a: kernel=absent,0,; debugfs=absent,0,; grub=err,0,; tsk=absent,0,
+
+### c08_illegal_name  e2fsck_exit=4  accepted=['7zip', 'debugfs', 'grub', 'kernel', 'tsk']  rejected=[]
+  DIFF /: kernel=err:Input/output error,0,; debugfs=absent,0,; grub=absent,0,; tsk=absent,0,; 7zip=absent,0,
+  DIFF a.txt: kernel=absent,0,; debugfs=f,550,fc4a0bb890cd; grub=f,550,fc4a0bb890cd; tsk=f,550,fc4a0bb890cd; 7zip=f,550,fc4a0bb890cd
+  DIFF b/txt: kernel=absent,0,; debugfs=absent,0,; grub=err,0,; tsk=f,550,2c2115757da9; 7zip=absent,0,
+  DIFF b_txt: kernel=absent,0,; debugfs=absent,0,; grub=absent,0,; tsk=absent,0,; 7zip=f,550,2c2115757da9
+  DIFF dir: kernel=absent,0,; debugfs=d,0,; grub=d,0,; tsk=d,0,; 7zip=d,0,
+  DIFF dir/c.txt: kernel=absent,0,; debugfs=f,390,75826aa2c1b2; grub=f,390,75826aa2c1b2; tsk=f,390,75826aa2c1b2; 7zip=f,390,75826aa2c1b2
+  DIFF lost+found: kernel=absent,0,; debugfs=d,0,; grub=d,0,; tsk=d,0,; 7zip=d,0,
+  DIFF x.txt: kernel=absent,0,; debugfs=f,200,5bddadb0cda6; grub=f,200,5bddadb0cda6; tsk=f,200,5bddadb0cda6; 7zip=f,200,5bddadb0cda6
+
+### c09_dir_loop  e2fsck_exit=4  accepted=['debugfs', 'grub', 'kernel', 'tsk']  rejected=['7zip']
+  DIFF dir/loop: kernel=err:Too many levels of symbolic links,0,; debugfs=d,0,; grub=d,0,; tsk=d,0,
+  DIFF dir/loop/a.txt: kernel=absent,0,; debugfs=f,550,fc4a0bb890cd; grub=f,550,fc4a0bb890cd; tsk=f,550,fc4a0bb890cd
+  DIFF dir/loop/b.txt: kernel=absent,0,; debugfs=f,550,2c2115757da9; grub=f,550,2c2115757da9; tsk=f,550,2c2115757da9
+  DIFF dir/loop/dir: kernel=absent,0,; debugfs=d,0,; grub=d,0,; tsk=d,0,
+  DIFF dir/loop/dir/c.txt: kernel=absent,0,; debugfs=f,390,75826aa2c1b2; grub=f,390,75826aa2c1b2; tsk=absent,0,
+  DIFF dir/loop/dir/loop: kernel=absent,0,; debugfs=d,0,; grub=d,0,; tsk=absent,0,
+  DIFF dir/loop/dir/loop/a.txt: kernel=absent,0,; debugfs=f,550,fc4a0bb890cd; grub=f,550,fc4a0bb890cd; tsk=absent,0,
+  DIFF dir/loop/dir/loop/b.txt: kernel=absent,0,; debugfs=f,550,2c2115757da9; grub=f,550,2c2115757da9; tsk=absent,0,
+  DIFF dir/loop/dir/loop/dir: kernel=absent,0,; debugfs=d,0,; grub=d,0,; tsk=absent,0,
+  DIFF dir/loop/dir/loop/dir/c.txt: kernel=absent,0,; debugfs=f,390,75826aa2c1b2; grub=f,390,75826aa2c1b2; tsk=absent,0,
+  DIFF dir/loop/dir/loop/dir/loop: kernel=absent,0,; debugfs=d,0,; grub=d,0,; tsk=absent,0,
+  DIFF dir/loop/dir/loop/dir/loop/a.txt: kernel=absent,0,; debugfs=f,550,fc4a0bb890cd; grub=f,550,fc4a0bb890cd; tsk=absent,0,
+  DIFF dir/loop/dir/loop/dir/loop/b.txt: kernel=absent,0,; debugfs=f,550,2c2115757da9; grub=f,550,2c2115757da9; tsk=absent,0,
+  DIFF dir/loop/dir/loop/dir/loop/dir: kernel=absent,0,; debugfs=d,0,; grub=d,0,; tsk=absent,0,
+  DIFF dir/loop/dir/loop/dir/loop/dir/…: kernel=absent,0,; debugfs=depth-limit,0,; grub=depth-limit,0,; tsk=absent,0,
+  DIFF dir/loop/dir/loop/dir/loop/lost+found: kernel=absent,0,; debugfs=d,0,; grub=d,0,; tsk=absent,0,
+  DIFF dir/loop/dir/loop/dir/loop/lost+found/…: kernel=absent,0,; debugfs=depth-limit,0,; grub=depth-limit,0,; tsk=absent,0,
+  DIFF dir/loop/dir/loop/dir/loop/x.txt: kernel=absent,0,; debugfs=f,200,5bddadb0cda6; grub=f,200,5bddadb0cda6; tsk=absent,0,
+  DIFF dir/loop/dir/loop/lost+found: kernel=absent,0,; debugfs=d,0,; grub=d,0,; tsk=absent,0,
+  DIFF dir/loop/dir/loop/x.txt: kernel=absent,0,; debugfs=f,200,5bddadb0cda6; grub=f,200,5bddadb0cda6; tsk=absent,0,
+  DIFF dir/loop/lost+found: kernel=absent,0,; debugfs=d,0,; grub=d,0,; tsk=d,0,
+  DIFF dir/loop/x.txt: kernel=absent,0,; debugfs=f,200,5bddadb0cda6; grub=f,200,5bddadb0cda6; tsk=f,200,5bddadb0cda6
+
+### c10_unknown_incompat  e2fsck_exit=8  accepted=['7zip', 'grub', 'tsk']  rejected=['debugfs', 'kernel']
+  DIFF a.txt: grub=absent,0,; tsk=f,550,fc4a0bb890cd; 7zip=f,550,fc4a0bb890cd
+  DIFF b.txt: grub=absent,0,; tsk=f,550,2c2115757da9; 7zip=f,550,2c2115757da9
+  DIFF dir: grub=absent,0,; tsk=d,0,; 7zip=d,0,
+  DIFF dir/c.txt: grub=absent,0,; tsk=f,390,75826aa2c1b2; 7zip=f,390,75826aa2c1b2
+  DIFF lost+found: grub=absent,0,; tsk=d,0,; 7zip=d,0,
+  DIFF x.txt: grub=absent,0,; tsk=f,200,5bddadb0cda6; 7zip=f,200,5bddadb0cda6

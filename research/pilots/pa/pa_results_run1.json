@@ -1,0 +1,2656 @@
+{
+ "c01_crosslink": {
+  "e2fsck_exit": 4,
+  "rejected": {},
+  "semantic_disagreements": {},
+  "views": {
+   "kernel": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "debugfs": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "grub": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "tsk": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "7zip": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   }
+  }
+ },
+ "c02_hidden_entry": {
+  "e2fsck_exit": 4,
+  "rejected": {},
+  "semantic_disagreements": {
+   "[UNKNOWN]": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "absent",
+     0,
+     ""
+    ],
+    "grub": [
+     "absent",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ],
+    "7zip": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "[UNKNOWN]/16": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "absent",
+     0,
+     ""
+    ],
+    "grub": [
+     "absent",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ],
+    "7zip": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   }
+  },
+  "views": {
+   "kernel": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "debugfs": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "grub": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ]
+   },
+   "tsk": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ]
+   },
+   "7zip": {
+    "[UNKNOWN]": [
+     "d",
+     0,
+     ""
+    ],
+    "[UNKNOWN]/16": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ]
+   }
+  }
+ },
+ "c03_size_mismatch": {
+  "e2fsck_exit": 0,
+  "rejected": {},
+  "semantic_disagreements": {},
+  "views": {
+   "kernel": {
+    "a.txt": [
+     "f",
+     5000,
+     "ac842f974247"
+    ],
+    "b.txt": [
+     "f",
+     10,
+     "3fbdc5b63543"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "debugfs": {
+    "a.txt": [
+     "f",
+     5000,
+     "ac842f974247"
+    ],
+    "b.txt": [
+     "f",
+     10,
+     "3fbdc5b63543"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "grub": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     5000,
+     "ac842f974247"
+    ],
+    "b.txt": [
+     "f",
+     10,
+     "3fbdc5b63543"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "tsk": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     5000,
+     "ac842f974247"
+    ],
+    "b.txt": [
+     "f",
+     10,
+     "3fbdc5b63543"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "7zip": {
+    "a.txt": [
+     "f",
+     5000,
+     "ac842f974247"
+    ],
+    "b.txt": [
+     "f",
+     10,
+     "3fbdc5b63543"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   }
+  }
+ },
+ "c04_links_zero": {
+  "e2fsck_exit": 4,
+  "rejected": {},
+  "semantic_disagreements": {
+   "a.txt": {
+    "kernel": [
+     "err:Structure needs cleaning",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "grub": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "tsk": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "7zip": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ]
+   }
+  },
+  "views": {
+   "kernel": {
+    "a.txt": [
+     "err:Structure needs cleaning",
+     0,
+     ""
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "debugfs": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "grub": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "tsk": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "7zip": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   }
+  }
+ },
+ "c05_bitmap_free": {
+  "e2fsck_exit": 4,
+  "rejected": {
+   "7zip": "Headers Error"
+  },
+  "semantic_disagreements": {},
+  "views": {
+   "kernel": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "debugfs": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "grub": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "tsk": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "7zip": {
+    "!REJECT": "Headers Error"
+   }
+  }
+ },
+ "c06_duplicate_name": {
+  "e2fsck_exit": 4,
+  "rejected": {},
+  "semantic_disagreements": {
+   "a.txt": {
+    "kernel": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "debugfs": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "grub": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "tsk": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "7zip": [
+     "f",
+     550,
+     "2c2115757da9"
+    ]
+   }
+  },
+  "views": {
+   "kernel": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "debugfs": {
+    "a.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "grub": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "tsk": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "7zip": {
+    "a.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   }
+  }
+ },
+ "c07_filetype_mismatch": {
+  "e2fsck_exit": 4,
+  "rejected": {
+   "7zip": "Headers Error"
+  },
+  "semantic_disagreements": {
+   "a.txt": {
+    "kernel": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "debugfs": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "a.txt/ha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-a": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "absent",
+     0,
+     ""
+    ],
+    "grub": [
+     "err",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   }
+  },
+  "views": {
+   "kernel": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "debugfs": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "grub": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt/ha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-alpha-AAAA-a": [
+     "err",
+     0,
+     ""
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "tsk": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "d",
+     0,
+     ""
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "7zip": {
+    "!REJECT": "Headers Error"
+   }
+  }
+ },
+ "c08_illegal_name": {
+  "e2fsck_exit": 4,
+  "rejected": {},
+  "semantic_disagreements": {
+   "/": {
+    "kernel": [
+     "err:Input/output error",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "absent",
+     0,
+     ""
+    ],
+    "grub": [
+     "absent",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ],
+    "7zip": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "a.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "grub": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "tsk": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "7zip": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ]
+   },
+   "b/txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "absent",
+     0,
+     ""
+    ],
+    "grub": [
+     "err",
+     0,
+     ""
+    ],
+    "tsk": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "7zip": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "b_txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "absent",
+     0,
+     ""
+    ],
+    "grub": [
+     "absent",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ],
+    "7zip": [
+     "f",
+     550,
+     "2c2115757da9"
+    ]
+   },
+   "dir": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "d",
+     0,
+     ""
+    ],
+    "7zip": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "dir/c.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "grub": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "tsk": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "7zip": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ]
+   },
+   "lost+found": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "d",
+     0,
+     ""
+    ],
+    "7zip": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "x.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "grub": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "tsk": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "7zip": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   }
+  },
+  "views": {
+   "kernel": {
+    "/": [
+     "err:Input/output error",
+     0,
+     ""
+    ]
+   },
+   "debugfs": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "grub": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b/txt": [
+     "err",
+     0,
+     ""
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "tsk": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b/txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "7zip": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b_txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   }
+  }
+ },
+ "c09_dir_loop": {
+  "e2fsck_exit": 4,
+  "rejected": {
+   "7zip": "Headers Error"
+  },
+  "semantic_disagreements": {
+   "dir/loop": {
+    "kernel": [
+     "err:Too many levels of symbolic links",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/a.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "grub": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "tsk": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ]
+   },
+   "dir/loop/b.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "grub": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "tsk": [
+     "f",
+     550,
+     "2c2115757da9"
+    ]
+   },
+   "dir/loop/dir": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/c.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "grub": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/a.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "grub": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/b.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "grub": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/dir": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/dir/c.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "grub": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/dir/loop": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/dir/loop/a.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "grub": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/dir/loop/b.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "grub": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/dir/loop/dir": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/dir/loop/dir/\u2026": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "depth-limit",
+     0,
+     ""
+    ],
+    "grub": [
+     "depth-limit",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/dir/loop/lost+found": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/dir/loop/lost+found/\u2026": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "depth-limit",
+     0,
+     ""
+    ],
+    "grub": [
+     "depth-limit",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/dir/loop/x.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "grub": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/lost+found": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/dir/loop/x.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "grub": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "tsk": [
+     "absent",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/lost+found": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "d",
+     0,
+     ""
+    ],
+    "grub": [
+     "d",
+     0,
+     ""
+    ],
+    "tsk": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "dir/loop/x.txt": {
+    "kernel": [
+     "absent",
+     0,
+     ""
+    ],
+    "debugfs": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "grub": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "tsk": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   }
+  },
+  "views": {
+   "kernel": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "dir/loop": [
+     "err:Too many levels of symbolic links",
+     0,
+     ""
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "debugfs": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "dir/loop": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir/loop/b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir/loop/dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "dir/loop/dir/loop": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir/loop/dir/loop/b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir/loop/dir/loop/dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "dir/loop/dir/loop/dir/loop": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/loop/a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir/loop/dir/loop/dir/loop/b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir/loop/dir/loop/dir/loop/dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/loop/dir/\u2026": [
+     "depth-limit",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/loop/lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/loop/lost+found/\u2026": [
+     "depth-limit",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/loop/x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "dir/loop/dir/loop/lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "dir/loop/lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "grub": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "dir/loop": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir/loop/b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir/loop/dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "dir/loop/dir/loop": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir/loop/dir/loop/b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir/loop/dir/loop/dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "dir/loop/dir/loop/dir/loop": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/loop/lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/loop/lost+found/\u2026": [
+     "depth-limit",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/loop/a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir/loop/dir/loop/dir/loop/b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir/loop/dir/loop/dir/loop/dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/loop/dir/\u2026": [
+     "depth-limit",
+     0,
+     ""
+    ],
+    "dir/loop/dir/loop/dir/loop/x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "dir/loop/dir/loop/x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "dir/loop/x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "tsk": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "dir/loop": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "dir/loop/b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir/loop/dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/loop/x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "7zip": {
+    "!REJECT": "Headers Error"
+   }
+  }
+ },
+ "c10_unknown_incompat": {
+  "e2fsck_exit": 8,
+  "rejected": {
+   "kernel": "ng codepage or helper program, or other error.\n       dmesg(1) may have more information after failed mount system call.",
+   "debugfs": "/-home-user/7eb4a8bd-7556-52a0-9012-ef36f1b3c20f/scratchpad/pa_work/c10_unknown_incompat.img\nrdump: Filesystem not open\n"
+  },
+  "semantic_disagreements": {
+   "a.txt": {
+    "grub": [
+     "absent",
+     0,
+     ""
+    ],
+    "tsk": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "7zip": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ]
+   },
+   "b.txt": {
+    "grub": [
+     "absent",
+     0,
+     ""
+    ],
+    "tsk": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "7zip": [
+     "f",
+     550,
+     "2c2115757da9"
+    ]
+   },
+   "dir": {
+    "grub": [
+     "absent",
+     0,
+     ""
+    ],
+    "tsk": [
+     "d",
+     0,
+     ""
+    ],
+    "7zip": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "dir/c.txt": {
+    "grub": [
+     "absent",
+     0,
+     ""
+    ],
+    "tsk": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "7zip": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ]
+   },
+   "lost+found": {
+    "grub": [
+     "absent",
+     0,
+     ""
+    ],
+    "tsk": [
+     "d",
+     0,
+     ""
+    ],
+    "7zip": [
+     "d",
+     0,
+     ""
+    ]
+   },
+   "x.txt": {
+    "grub": [
+     "absent",
+     0,
+     ""
+    ],
+    "tsk": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ],
+    "7zip": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   }
+  },
+  "views": {
+   "kernel": {
+    "!REJECT": "ng codepage or helper program, or other error.\n       dmesg(1) may have more information after failed mount system call."
+   },
+   "debugfs": {
+    "!REJECT": "/-home-user/7eb4a8bd-7556-52a0-9012-ef36f1b3c20f/scratchpad/pa_work/c10_unknown_incompat.img\nrdump: Filesystem not open\n"
+   },
+   "grub": {},
+   "tsk": {
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   },
+   "7zip": {
+    "a.txt": [
+     "f",
+     550,
+     "fc4a0bb890cd"
+    ],
+    "b.txt": [
+     "f",
+     550,
+     "2c2115757da9"
+    ],
+    "dir": [
+     "d",
+     0,
+     ""
+    ],
+    "dir/c.txt": [
+     "f",
+     390,
+     "75826aa2c1b2"
+    ],
+    "lost+found": [
+     "d",
+     0,
+     ""
+    ],
+    "x.txt": [
+     "f",
+     200,
+     "5bddadb0cda6"
+    ]
+   }
+  }
+ }
+}

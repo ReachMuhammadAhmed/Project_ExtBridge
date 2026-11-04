@@ -1,0 +1,10 @@
+kernel: 6.18.44-fc-v233
+CONFIG_EXT4_USE_FOR_EXT2=y
+driver serving mount: ext2 (EXT4-fs (loop0): mounted filesystem 868134a8-928a-4ba3-ac3c-1e666d714a99 r/w without journal. Quota mode: none.)
+== per-file results (inode: links dtime size nonzero_i_block recovered_sha) ==
+f1 ino=12 links=0 dtime=set size=0 nonzero_iblock=0/15 direct0=0 ind=0 dind=0 orig_sha=e357c214efbb0313 inode_follow_sha=e3b0c44298fc1c14 pattern_occurrences_left_on_disk=1
+f2 ino=13 links=0 dtime=set size=0 nonzero_iblock=0/15 direct0=0 ind=0 dind=0 orig_sha=23ef830caf5605e9 inode_follow_sha=e3b0c44298fc1c14 pattern_occurrences_left_on_disk=1
+f3 ino=14 links=0 dtime=set size=0 nonzero_iblock=0/15 direct0=0 ind=0 dind=0 orig_sha=d56a9816d3a04b95 inode_follow_sha=e3b0c44298fc1c14 pattern_occurrences_left_on_disk=1
+f4 ino=15 links=0 dtime=set size=0 nonzero_iblock=0/15 direct0=0 ind=0 dind=0 orig_sha=b72d88011a29f408 inode_follow_sha=e3b0c44298fc1c14 pattern_occurrences_left_on_disk=1
+f5 ino=16 links=0 dtime=set size=0 nonzero_iblock=0/15 direct0=0 ind=0 dind=0 orig_sha=7ebcb5ea36aad10c inode_follow_sha=e3b0c44298fc1c14 pattern_occurrences_left_on_disk=1
+e2fsck -fn exit: 0
