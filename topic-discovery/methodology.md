@@ -541,7 +541,7 @@ Verify each named venue's scope and sponsorship yourself.
    - the gate history of every candidate, including why each dropped one was dropped.
 5. Freeze the research questions and evaluation plan with a dated commit or a free OSF pre-registration.
 6. Update `claims_register.md` so every factual claim in the decision record and the planned paper has a source, an evidence tag and a verification status; resolve or remove unverified claims before writing the paper.
-7. Draft the **IEEE AI-use acknowledgment** from `ai_use_log.md`. IEEE requires authors to disclose AI-generated content in the paper; the current wording and placement are in `TOOLS.md`. Name each AI system, what it produced (text, code, figures) and the sections where it was used.
+7. Draft the **IEEE AI-use acknowledgment** from `ai_use_log.md`. IEEE requires AI-generated content (text, figures, images, code) to be disclosed in the paper's **acknowledgments section**: name each AI system, identify the sections that use its content, and briefly explain the level of use. Check the target venue's own rules too, which may be stricter. Policy source: `TOOLS.md`.
 
 **Output artifact.** `decisions.md`, plus the frozen evaluation plan.
 
