@@ -2,8 +2,10 @@
 """Apply the methodology's citation verification rule (Stage 0).
 
 A reference may be used only after:
-  1. its DOI (or arXiv ID) resolves (Crossref, DataCite or arXiv), and
-  2. the title, authors, year and venue ALL match that record.
+  1. its DOI (or arXiv ID) resolves (Crossref, DataCite or arXiv) -- or, for a paper with neither,
+     its dblp record (--dblp) or official proceedings page is found;
+  2. the title, authors, year and venue ALL match that record; and
+  3. it has not been retracted (check with Scholar Sidekick, the primary tool; this script is the fallback).
 
 This script checks title, authors and year automatically, and venue when you
 pass --venue. It uses only the Python standard library and free APIs:

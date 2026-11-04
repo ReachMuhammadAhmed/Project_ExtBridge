@@ -45,7 +45,7 @@ Don't skip gates. Most wasted effort comes from skipping one.
 6. Read `QUALITY_CHECKLIST.md` (15 failure patterns, each checked at a named gate) and `TOOLS.md` (every tool, its free terms and the stage that uses it).
 
 **Citation verification rule (applies everywhere).** A reference may be used, or entered into the literature matrix, only after:
-1. its DOI (or arXiv ID) resolves at doi.org, Crossref or arXiv;
+1. its DOI (or arXiv ID) resolves at doi.org, Crossref or arXiv; or, for a paper with neither, its dblp record or official proceedings page is found;
 2. the title, authors, year and venue *all* match that record; and
 3. it has not been retracted.
 
@@ -98,7 +98,7 @@ AI-produced references stay tagged `[AI-unverified]` until these checks pass.
    |---|---|---|---|
    | Unit of analysis | Unclear | Definable with extra work | Clear (e.g., one bug report, one commit, one drive-day) |
    | Labels or ground truth | None | Heuristic only (e.g., keyword matching) | Recorded in the data (e.g., fix commits, issue state, failure flags, CVE fields) |
-   | History | Under 1 year | 1–3 years | 3 years or more |
+   | History | Under 1 year | 1–3 years, or start date not verified | 3 years or more (verified start date) |
    | Licence for research use | Prohibits research use (**drop the cell**) | Terms of service only, or reuse unclear (confirm before Stage 6) | Explicit open licence, public domain, or stated research permission |
    | Mining saturation (OpenAlex count of papers naming the source) | Top third of counts (heavily mined) | Middle third | Bottom third |
 
@@ -116,7 +116,7 @@ AI-produced references stay tagged `[AI-unverified]` until these checks pass.
 **Output artifact.** `intersection_map.md`: the grid with data-availability notes, the usability scoring table, and the short list of 8–12 cells with their distinct sources.
 
 **Exit criteria (gate).**
-- **Proceed** if 8–12 cells score at least 6 on data usability, none scores 0 on licence, and you've opened each short-listed source at least once. State how many distinct sources the short list uses.
+- **Proceed** if at least 8 cells score at least 6 on data usability, the short list holds 8–12 of them, none scores 0 on licence, and you've opened each short-listed source at least once. State how many distinct sources the short list uses.
 - **Reshape** if fewer than 8 qualify: look for better sources for the weak cells (labels, longer history), or broaden the OS concerns or SE activities.
 
 **Common mistakes.**
@@ -317,7 +317,7 @@ The card must also pass `QUALITY_CHECKLIST.md` item 4 (generic or repeated ideas
    - mailing-list threads proposing a fix.
 
    A practical solution with no paper still weakens a gap.
-5. **Adversarial search.** Ask the AI to write the abstract of the paper that would make your gap false. Then search using *that abstract's wording*. Also run it through Undermind's free tier: use it only here, for the top 2 candidates, because its monthly quota is small (see `TOOLS.md`). Its results go through the citation verification rule like any other source.
+5. **Adversarial search.** Ask the AI to write the abstract of the paper that would make your gap false. Then search using *that abstract's wording*. Also run it through Undermind's free tier: use it only here, for the top 2 candidates, because the free tier is rate-limited (see `TOOLS.md`). Its results go through the citation verification rule like any other source.
 6. **Complete the literature matrix** (template below) for every relevant paper. Mark each with the evidence tags. Only `[read-full]` papers can be used to support the gap.
 
 **Free routes to IEEE papers (and ACM)**, roughly in order of reliability:
@@ -757,4 +757,4 @@ Place each candidate on this ladder honestly. Only levels 3 and 4 should be sele
   - IEEE's author-posting policy wording;
   - Stack Exchange data-dump availability;
   - registration requirements of I/O trace repositories.
-- **Browser only (blocks scripts):** Google Scholar, dblp, lore.kernel.org, IEEE Xplore abstract pages. Use them manually, and log your queries the same way.
+- **Browser only (blocks scripts):** Google Scholar, IEEE Xplore abstract pages, and lore.kernel.org *web pages* (for scripts, use lore git clones; see `TOOLS.md`). dblp blocks scripts from some networks, so run `tools/verify_citation.py --dblp` from your own machine. Use browser-only sources manually, and log your queries the same way.

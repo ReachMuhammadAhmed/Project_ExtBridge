@@ -134,7 +134,7 @@ Cells scored: 85 · scoring ≥ 6 with licence > 0: 73 · shaded: 15.
 
 **12 cells, 11 distinct sources** (C4, C5, F4, F7, K12, K13, L-lkp, R3, S5, S9, SC4). Each source counts at most twice.
 
-**AI-side gate result:** PASS: 8–12 cells score ≥ 6 and none scores 0 on licence. The gate becomes final only after the student has opened every short-listed source (methodology Stage 1 exit criteria). Licence scores of 1 must be confirmed before Stage 6.
+**AI-side gate result:** PASS: 73 cells score ≥ 6 (at least 8 needed), the short list holds 12 (8–12 allowed), and none scores 0 on licence. The gate becomes final only after the student has opened every short-listed source (methodology Stage 1 exit criteria). Licence scores of 1 must be confirmed before Stage 6.
 
 ## Source catalogue
 
@@ -203,4 +203,4 @@ Cells scored: 85 · scoring ≥ 6 with licence > 0: 73 · shaded: 15.
 - **History:** GitHub "created" dates can be later than the project's real history (e.g., the kernel mirror holds history from 2005). Lore start dates are the first message in epoch 0, measured from blob-free clones. Those clones are large (about 0.3–1.1 GB per epoch), so plan the disk space.
 - **OpenAlex counts** are phrase searches over titles and abstracts. They are a rough saturation signal only, never proof of a gap. Generic names (e.g., "systemd", "runc") also match papers that merely mention the tool.
 - **Licence 1** means the reuse terms couldn't be confirmed or only platform terms apply. Report mined data in aggregate (Stage 2 ethics note), and confirm the terms before Stage 6.
-- The three earlier "unreachable" lore cells (code review in file systems, storage, memory, kernel and drivers), plus scheduling CI and kernel performance, now use lore git clones. fstests, the stable queue and rt-tests are reached as git clones.
+- Six cells now use lore git clones: code review in file systems, storage, memory management, kernel code, drivers, and virtualization (kvm). Two more do too: scheduling CI and kernel performance (kernel test robot reports). Earlier, these lists were unreachable through their web pages. fstests, the stable queue and rt-tests are reached as git clones.

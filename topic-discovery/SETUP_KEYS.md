@@ -6,7 +6,7 @@ Everything here is free. You create these accounts yourself; nobody else can cre
 
 | # | Service | Needed for | Where to sign up | Notes |
 |---|---|---|---|---|
-| 1 | **OpenAlex API key** | Stage 4 saturation counts; Stage 5A searches and citation chasing | Create an account at https://openalex.org, then copy the key from https://openalex.org/settings/api | Per the [official docs](https://developers.openalex.org/api-reference/authentication), a free key gives a daily usage budget; keyless calls get a much smaller one. Pass it as `api_key=YOUR_KEY` in requests. **Status: configured** (`OPENALEX_API_KEY`). |
+| 1 | **OpenAlex API key** | Stage 1 mining-saturation counts; Stage 4 saturation counts; Stage 5A searches and citation chasing | Create an account at https://openalex.org, then copy the key from https://openalex.org/settings/api | Per the [official docs](https://developers.openalex.org/api-reference/authentication), a free key gives a daily usage budget; keyless calls get a much smaller one. Pass it as `api_key=YOUR_KEY` in requests. **Status: configured** (`OPENALEX_API_KEY`). |
 | 2 | **Semantic Scholar API key** | Stage 5A searches, citation graph, open-access PDF links | Request form: https://www.semanticscholar.org/product/api#api-key-form | **Status: pending** (requested, not yet received). Until it arrives, **OpenAlex covers search and citation chasing**. Without a key, Semantic Scholar requests are often rate-limited (HTTP 429). |
 | 3 | **CORE** | Stage 5A: free full texts from university repositories | No key needed: https://core.ac.uk/services/api | **Status: used without a key.** Per the official page, the API works without registration at a low rate limit. A free key (enter your email on the same page) raises it if you ever need more. API docs: https://api.core.ac.uk/docs/v3 |
 | 3a | **Scholar Sidekick key** | Citation verification rule (all stages): verification, retraction and open-access checks | https://scholar-sidekick.com/account | **Status: configured** (`SCHOLAR_API_KEY`). Free key: 120 requests/60 s on the verify, retraction and open-access endpoints; anonymous use gets 60/60 s. Sent as `Authorization: Bearer <key>`. See `TOOLS.md`. |
@@ -36,7 +36,7 @@ Load it into your shell before running scripts:
 set -a; source .env; set +a
 ```
 
-Quick checks once the keys exist. Each should print `200`:
+Quick checks once the keys exist. Each should print `200` (`429` means you hit a rate limit; wait and retry):
 
 ```bash
 curl -s -o /dev/null -w "%{http_code}\n" "https://api.openalex.org/works?search=file%20system&per-page=1&api_key=$OPENALEX_API_KEY"
@@ -48,7 +48,7 @@ curl -s -o /dev/null -w "%{http_code}\n" -H "x-api-key: $SEMANTIC_SCHOLAR_API_KE
 ```
 
 ```bash
-curl -s -o /dev/null -w "%{http_code}\n" "https://api.core.ac.uk/v3/search/works?q=file%20system&limit=1"
+curl -s -o /dev/null -w "%{http_code}\n" "https://api.core.ac.uk/v3/search/works/?q=file%20system&limit=1"
 ```
 
 ## 3. Test verification (Stage 0 exit criterion: you must run this yourself)
@@ -58,7 +58,7 @@ Pick **one paper you already know** (from a course or reading list). From the pa
 **Primary check: Scholar Sidekick.** The verdict must be `matched`; also run the retraction check:
 
 ```bash
-curl -s -X POST https://scholar-sidekick.com/api/verify -H "Authorization: Bearer $SCHOLAR_API_KEY" -H "Content-Type: application/json" -d '{"claimed":{"title":"<exact title>","authors":[{"family":"<FirstAuthorFamilyName>"}],"year":<year>,"doi":"<DOI>"}}'
+curl -s -X POST https://scholar-sidekick.com/api/verify -H "Authorization: Bearer $SCHOLAR_API_KEY" -H "Content-Type: application/json" -d '{"claimed":{"title":"<exact title>","authors":[{"family":"<FirstAuthorFamilyName>"}],"year":<year>,"container":"<journal or conference>","doi":"<DOI>"}}'
 ```
 
 ```bash

@@ -6,7 +6,7 @@ Working folder for the research-topic discovery methodology. Start with `methodo
 |---|---|---|
 | `methodology.md` | all | The finalized methodology (stages, gates, templates) |
 | `SETUP_KEYS.md` | 0 | Free accounts and API keys to create, key storage, test verification |
-| `tools/verify_citation.py` | 0+ | Applies the citation verification rule (Crossref / DataCite / arXiv) |
+| `tools/verify_citation.py` | 0+ | Fallback for the citation verification rule (Crossref / DataCite / arXiv; `--dblp` for papers without a DOI). Scholar Sidekick is the primary check |
 | `problem_log.csv` | 2 | Evidenced real-world problems |
 | `idea_cards/` | 3 | One card per candidate topic (`TEMPLATE.md`) |
 | `search_log.csv` | 4–5A | Every search query, logged |

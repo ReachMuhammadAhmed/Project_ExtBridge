@@ -12,7 +12,7 @@ Every tool named in `methodology.md` is listed here. Free terms were checked aga
 - **official** = read on the official page;
 - **official (excerpt)** = the official page blocks scripts, so it was confirmed from a search excerpt of that page.
 
-Data *sources* (issue trackers, mailing lists, datasets) aren't tools; their licences and access are in `intersection_map.md`.
+Data *sources* aren't tools. Those scored in Stage 1 have their licences and access recorded in `intersection_map.md`. Practice sources browsed in Stage 2 (kernel Bugzilla, LWN, elixir.bootlin.com, git.kernel.org web pages) are read in a browser under the Stage 2 ethics note; check each one's terms before mining it.
 
 ## Literature search, verification and access
 
@@ -24,7 +24,7 @@ Data *sources* (issue trackers, mailing lists, datasets) aren't tools; their lic
 | DataCite REST API | 0 (via script) | Metadata for DataCite DOIs (arXiv, Zenodo) | Free reads; 500 requests/5 min per IP (1,000 with `mailto`). Official | no setup | https://support.datacite.org/docs/rate-limit |
 | arXiv API | 0 (via script), 5A | Metadata and preprint search | Free; at most one request every 3 seconds, single connection. Official | no setup | https://info.arxiv.org/help/api/tou.html |
 | dblp search API | 0 (citation rule, no-DOI papers), 5A | Look up papers without a DOI or arXiv ID | Free, non-profit service; metadata CC0 1.0; at most 1,000 hits per query. Official (excerpt). Blocks scripts from the research sandbox, so use it from your own machine or browser | no setup | https://dblp.org/faq/How+to+use+the+dblp+search+API.html · https://dblp.org/faq/1474677.html |
-| OpenAlex API | 4, 5A | Search, citation chasing, saturation counts (also covers Semantic Scholar's role while that key is pending) | "Data is free, and so is casual use"; a free key raises the daily budget about 10×. Official | configured (`OPENALEX_API_KEY`) | https://developers.openalex.org/guides/authentication · https://developers.openalex.org/guides/pricing |
+| OpenAlex API | 1, 4, 5A | Search, citation chasing, saturation counts (Stage 1 mining score, Stage 4 saturation check) (also covers Semantic Scholar's role while that key is pending) | "Data is free, and so is casual use"; a free key raises the daily budget about 10×. Official | configured (`OPENALEX_API_KEY`) | https://developers.openalex.org/guides/authentication · https://developers.openalex.org/guides/pricing |
 | Semantic Scholar API | 4, 5A | Search, citation graph, open-access PDF links | Free; unauthenticated calls share a pool and are often rate-limited; a free key starts at 1 request/s. Official | **pending** (key requested) | https://www.semanticscholar.org/product/api |
 | CORE API | 5A | Full texts from university repositories | "Free and does not require registration, subject to our rate limits". Official | configured (used without a key) | https://core.ac.uk/services/api |
 | Unpaywall API | 5A | Find legal open-access copies | Free; an email parameter is required on every call. Official (the email rule was confirmed by the API's own error) | no setup | https://unpaywall.org/products/api |
@@ -38,6 +38,7 @@ Data *sources* (issue trackers, mailing lists, datasets) aren't tools; their lic
 | IEEE Computer Society Digital Library | 5A, 7 | Tables of contents and abstracts | Tables of contents and abstracts free (reachable from here); full texts often paywalled | no setup | https://www.computer.org/csdl/home |
 | USENIX proceedings | 5A, 7 | Free full texts of USENIX papers | Free open-access proceedings (reachable from here) | no setup | https://www.usenix.org/publications/proceedings |
 | Zotero | 0 → all | Store papers with DOIs | Free app; free sync storage 300 MB. Official | to install | https://www.zotero.org/storage |
+| IEEE Xplore (browse pages) | 5A, 7 | Abstracts and tables of contents of IEEE papers | **Not verified:** the site returns HTTP 418 to scripts, and searches of IEEE's own domains didn't state the free-browsing terms. Open an abstract while logged out in your browser to confirm | no setup (browser) | https://ieeexplore.ieee.org/ |
 
 ## Data collection and analysis
 
@@ -46,14 +47,18 @@ Data *sources* (issue trackers, mailing lists, datasets) aren't tools; their lic
 | **lore.kernel.org git clones** | 1, 2 | Kernel mailing lists as git repositories (web pages block scripts; git works). Clone **one list, one epoch at a time**: `git clone https://lore.kernel.org/<list>/git/<N>.git` | Free public archive. Epochs on 2026-11-04: linux-ext4 0, linux-block 0, oe-lkp 0, linux-fsdevel 0–1, kvm 0–1, linux-mm 0–2, dri-devel 0–2, lkml 0–20. Even blob-free clones are about 0.3–1.1 GB per epoch. Verified by `git ls-remote` and clones | to install (git) | https://lore.kernel.org/ |
 | **PyDriller** | 2 (frequency counts, filtered by subsystem path such as `fs/ext4/`), 6 (pilot) | Mine commit history from git repositories | Apache-2.0; `pip install pydriller` (v2.12 on PyPI). Official | to install | https://pypi.org/project/PyDriller/ |
 | pandas, scikit-learn | 6 | Data handling and ML for the pilot | BSD-3-Clause (PyPI metadata). Official | to install | https://pypi.org/project/pandas/ · https://pypi.org/project/scikit-learn/ |
+| Git | 0 → all | Version control: logs, dated pre-registration commits, lore and kernel clones | Free software under GPL v2 (official COPYING file) | to install | https://github.com/git/git/blob/master/COPYING |
+| Python, SQL (e.g., SQLite), C/C++ compilers | 6 | Languages for the pilot | Free and open source (Python is managed by the non-profit Python Software Foundation; official licence page) | to install | https://docs.python.org/3/license.html |
 | GitHub account | 2 | Code search (needs login), higher API limits | Free account; "you must be logged in … to use code search". Official | to install (if you lack one) | https://docs.github.com/en/search-github/github-code-search/about-github-code-search |
 | llama.cpp / Ollama (optional) | 0, 3 | Small local language model, only where text understanding is unavoidable | Both MIT-licensed, free local software. Official licence files | optional | https://github.com/ggml-org/llama.cpp · https://github.com/ollama/ollama |
+| Zenodo (optional) | 8 | Archived copy of the replication package with a DOI | Free to upload and to access, and assigns a DOI to every upload. Official (Zenodo-hosted OpenAIRE/CERN factsheet) | optional | https://zenodo.org/records/8348294 |
 | OSF (optional) | 6, 8 | Dated pre-registration (a dated Git commit also works) | "A free, open-source platform… register study plans". Official | optional | https://www.cos.io/products/osf |
 
 ## Venue selection (Stage 7)
 
 | Tool | Stage | Purpose | Free terms and limits | Status | Source |
 |---|---|---|---|---|---|
+| IEEE conference search and IEEE Computer Society events | 7 | Find IEEE-sponsored conferences and check sponsorship | IEEE CS events page is public (loads without login). The ieee.org conference search returns HTTP 418 to scripts, so its terms are **not verified**; use it in a browser | no setup (browser) | https://www.computer.org/conferences · https://conferences.ieee.org/ |
 | **ICORE conference portal** | 7 | Venue tier lookup (current edition ICORE2026) | Free search; login optional. Official | no setup | https://portal.core.edu.au/conf-ranks/ |
 | **se-deadlines** | 7 | SE conference deadlines (iCal export) | Free community site, updated by pull request. Official. **The official call for papers stays authoritative** | no setup | https://se-deadlines.github.io |
 | ACM SIGSOFT Empirical Standards | 7 | Reviewer checklists per paper type | Public, CC0. Official | no setup | https://github.com/acmsigsoft/EmpiricalStandards |

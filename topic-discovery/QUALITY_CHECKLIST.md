@@ -78,7 +78,7 @@ For each item: **Detect** = how you notice it · **Prevent** = what stops it hap
 
 ### 14. Poor fit with the SE/OS domain
 - **Detect:** the problem has no practice evidence from OS/systems projects, or the venue calibration set has no similar paper.
-- **Prevent:** Stage 1 usability scoring, Stage 2 practice evidence (≥ 2 sources), and the Stage 7 calibration set.
+- **Prevent:** Stage 1 usability scoring, Stage 2 evidence (≥ 2 independent evidence items, at least one from practice), and the Stage 7 calibration set.
 - **Correct:** reframe around the evidenced systems problem, or change venue or track.
 
 ### 15. Undisclosed AI use

@@ -238,7 +238,7 @@ w(f"\n**{len(short)} cells, {len(dist)} distinct sources** ({', '.join(dist)}). 
 if alternates:
     w("Alternates (high-scoring cells excluded only by the two-per-source cap): " +
       "; ".join(f"{r['concern']} × {r['col']} [{r['sid']}, {r['total']}]" for r in alternates) + ".\n")
-w("**AI-side gate result:** " + ("PASS: 8–12 cells score ≥ 6 and none scores 0 on licence. "
+w("**AI-side gate result:** " + (f"PASS: {len(eligible)} cells score ≥ 6 (at least 8 needed), the short list holds {len(short)} (8–12 allowed), and none scores 0 on licence. "
   if 8 <= len(short) <= 12 else "RESHAPE: fewer than 8 qualifying cells. ") +
   "The gate becomes final only after the student has opened every short-listed source (methodology Stage 1 exit criteria). "
   "Licence scores of 1 must be confirmed before Stage 6.\n")
@@ -253,7 +253,7 @@ w("""
 - **History:** GitHub "created" dates can be later than the project's real history (e.g., the kernel mirror holds history from 2005). Lore start dates are the first message in epoch 0, measured from blob-free clones. Those clones are large (about 0.3–1.1 GB per epoch), so plan the disk space.
 - **OpenAlex counts** are phrase searches over titles and abstracts. They are a rough saturation signal only, never proof of a gap. Generic names (e.g., "systemd", "runc") also match papers that merely mention the tool.
 - **Licence 1** means the reuse terms couldn't be confirmed or only platform terms apply. Report mined data in aggregate (Stage 2 ethics note), and confirm the terms before Stage 6.
-- The three earlier "unreachable" lore cells (code review in file systems, storage, memory, kernel and drivers), plus scheduling CI and kernel performance, now use lore git clones. fstests, the stable queue and rt-tests are reached as git clones.
+- Six cells now use lore git clones: code review in file systems, storage, memory management, kernel code, drivers, and virtualization (kvm). Two more do too: scheduling CI and kernel performance (kernel test robot reports). Earlier, these lists were unreachable through their web pages. fstests, the stable queue and rt-tests are reached as git clones.
 """)
 out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "intersection_map.md")
 open(out, "w").write("\n".join(L))
