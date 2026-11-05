@@ -1,0 +1,1 @@
+# profile_overlap.py (2026-11-05): NOT COMPLETED. Lazy tree fetch from a treeless clone took >300 s per commit and blamed commits on development branches are not in mainline ('not our ref'). Needs a full local kernel clone plus linux-next on the student's laptop.

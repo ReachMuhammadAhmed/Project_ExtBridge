@@ -85,3 +85,147 @@ Q-083,Stage 5A Pass 1,I-004,OpenAlex,traceability bug report fix commit recovery
 Q-084,Stage 5A Pass 1,I-004,OpenAlex,mailing list patch commit tracking Linux kernel,Linux patch tracking,2026-11-05,753,5,0,,run by AI (main session)
 Q-085,Stage 5A Pass 1,I-004,OpenAlex,Linux kernel regression report fix link,kernel regression links,2026-11-05,2705,5,0,,run by AI (main session)
 Q-086,Stage 5A Pass 1,I-004,OpenAlex,Closes tag Link tag Linux commit report,kernel tags,2026-11-05,3488,5,0,,run by AI (main session)
+Q-087,Stage 5A Pass 2,I-003,openalex,unresolved bug reports empirical study,unresolved,2026-11-05,5900,8,,,top8 printed | Sonnet subagent
+Q-088,Stage 5A Pass 2,I-003,openalex,abandoned bug reports never fixed open-source,unresolved,2026-11-05,5732,8,,,top8 printed | Sonnet subagent
+Q-089,Stage 5A Pass 2,I-003,openalex,stale issues bug reports won't fix,unresolved,2026-11-05,581,8,,,top8 printed | Sonnet subagent
+Q-090,Stage 5A Pass 2,I-003,openalex,bug report outcome prediction fixed or not,outcome,2026-11-05,19999,8,,,top8 printed | Sonnet subagent
+Q-091,Stage 5A Pass 2,I-003,openalex,predicting whether a bug report will be fixed,outcome,2026-11-05,50847,8,,,top8 printed | Sonnet subagent
+Q-092,Stage 5A Pass 2,I-003,openalex,regression bugs empirical study,regression,2026-11-05,32258,8,,,top8 printed | Sonnet subagent
+Q-093,Stage 5A Pass 2,I-003,openalex,regression bug fix time culprit commit identification,bisect,2026-11-05,64,8,,,top8 printed | Sonnet subagent
+Q-094,Stage 5A Pass 2,I-003,openalex,git bisect success bug-inducing commit identification effect on bug fixing,bisect,2026-11-05,11,8,,,top8 printed | Sonnet subagent
+Q-095,Stage 5A Pass 2,I-003,openalex,issue resolution prediction early features,outcome,2026-11-05,555751,8,,,top8 printed | Sonnet subagent
+Q-096,Stage 5A Pass 2,I-003,openalex,Linux kernel bugzilla empirical study bug reports,kernel,2026-11-05,312,8,,,top8 printed | Sonnet subagent
+Q-097,Stage 5A Pass 2,I-003,openalex,Linux kernel regressions mailing list reports,kernel,2026-11-05,1317,8,,,top8 printed | Sonnet subagent
+Q-098,Stage 5A Pass 2,I-003,openalex,Mozilla regression bugs regression range fix,neighbour,2026-11-05,983,8,,,top8 printed | Sonnet subagent
+Q-099,Stage 5A Pass 2,I-003,openalex,Chromium regression bugs bisect culprit,neighbour,2026-11-05,5,5,,,top8 printed | Sonnet subagent
+Q-100,Stage 5A Pass 2,I-003,openalex,Eclipse bug reports resolution WONTFIX unresolved,neighbour,2026-11-05,10,8,,,top8 printed | Sonnet subagent
+Q-101,Stage 5A Pass 2,I-003,openalex,Debian bug reports unresolved longevity,neighbour,2026-11-05,9,8,,,top8 printed | Sonnet subagent
+Q-102,Stage 5A Pass 2,I-003,openalex,GCC LLVM compiler regression bugs bisection,neighbour,2026-11-05,19,8,,,top8 printed | Sonnet subagent
+Q-103,Stage 5A Pass 2,I-003,openalex,regzbot,kernel,2026-11-05,1,1,,,top8 printed | Sonnet subagent
+Q-104,Stage 5A Pass 2,I-003,openalex,regression tracking Linux kernel unresolved regressions inconclusive,adv,2026-11-05,20,8,,,top8 printed | Sonnet subagent
+Q-105,Stage 5A Pass 2,I-003,openalex,long-lived bugs prediction,outcome,2026-11-05,27308,8,,,top8 printed | Sonnet subagent
+Q-106,Stage 5A Pass 2,I-003,openalex,bug reports never resolved reasons,unresolved,2026-11-05,35247,8,,,top8 printed | Sonnet subagent
+Q-107,Stage 5A Pass 2,I-003,openalex,does identifying the bug-inducing commit speed up bug fixing,bisect,2026-11-05,2325,8,,,top8 printed | Sonnet subagent
+Q-108,Stage 5A Pass 2,I-003,openalex,cites:W4404354878 (Ruohonen&Alami),snowball,2026-11-05,,,,,forward cites | Sonnet subagent
+Q-109,Stage 5A Pass 2,I-003,arxiv,"all:""regression"" AND all:""Linux kernel"" AND all:""unresolved""",mixed,2026-11-05,0,0,,,top8 | Sonnet subagent
+Q-110,Stage 5A Pass 2,I-003,arxiv,all:regzbot,mixed,2026-11-05,1,1,,,top8 | Sonnet subagent
+Q-111,Stage 5A Pass 2,I-003,arxiv,"all:""regression bugs"" AND all:""culprit commit""",mixed,2026-11-05,0,0,,,top8 | Sonnet subagent
+Q-112,Stage 5A Pass 2,I-003,arxiv,"all:""unresolved bug reports""",mixed,2026-11-05,0,0,,,top8 | Sonnet subagent
+Q-113,Stage 5A Pass 2,I-003,arxiv,"all:""bug report"" AND all:""will be fixed"" AND all:prediction",mixed,2026-11-05,8,8,,,top8 | Sonnet subagent
+Q-114,Stage 5A Pass 2,I-003,arxiv,"all:""bisection"" AND all:""regression"" AND all:""Linux kernel"" AND all:fix",mixed,2026-11-05,0,0,,,top8 | Sonnet subagent
+Q-115,Stage 5A Pass 2,I-003,arxiv,"all:""kernel bugzilla""",mixed,2026-11-05,0,0,,,top8 | Sonnet subagent
+Q-116,Stage 5A Pass 2,I-003,arxiv,"abs:""regression"" AND abs:""Linux"" AND abs:""inconclusive""",mixed,2026-11-05,0,0,,,top8 | Sonnet subagent
+Q-117,Stage 5A Pass 2,I-003,arxiv,"abs:""bug-inducing commit"" AND abs:""fix time""",mixed,2026-11-05,1,1,,,top8 | Sonnet subagent
+Q-118,Stage 5A Pass 2,I-003,arxiv,"abs:""Mozilla"" AND abs:""regression"" AND abs:""regression range""",mixed,2026-11-05,0,0,,,top8 | Sonnet subagent
+Q-119,Stage 5A Pass 2,I-003,openalex,regression bugs (2023+),venue sweep,2026-11-05,18439,12,,,top12 | Sonnet subagent
+Q-120,Stage 5A Pass 2,I-003,openalex,unresolved bugs (2023+),venue sweep,2026-11-05,3992,12,,,top12 | Sonnet subagent
+Q-121,Stage 5A Pass 2,I-003,openalex,bug report resolution outcome (2023+),venue sweep,2026-11-05,8978,12,,,top12 | Sonnet subagent
+Q-122,Stage 5A Pass 2,I-003,openalex,culprit commit regression (2023+),venue sweep,2026-11-05,475,12,,,top12 | Sonnet subagent
+Q-123,Stage 5A Pass 2,I-003,openalex,bisection regression Linux (2023+),venue sweep,2026-11-05,151,12,,,top12 | Sonnet subagent
+Q-124,Stage 5A Pass 2,I-003,openalex,Linux kernel regression reports triage maintainers response (2023+),adv,2026-11-05,132,12,,,top12 | Sonnet subagent
+Q-125,Stage 5A Pass 2,I-003,openalex,which bug reports remain unfixed predict unresolved early signals open source tracker (2023+),adv,2026-11-05,16,12,,,top12 | Sonnet subagent
+Q-126,Stage 5A Pass 2,I-003,openalex,bug reports closed without fix inconclusive cannot reproduce culprit unknown (2023+),adv,2026-11-05,0,0,,,top12 | Sonnet subagent
+Q-127,Stage 5A Pass 2,I-003,undermind,regzbot unresolved regressions culprit identified abstract,adv,2026-11-05,15,15,3,,Ruo24 Xia20 Gu24 Lyu23 | Sonnet subagent
+Q-128,Stage 5A Pass 2,I-003,undermind,Mozilla/Chromium regression range identification fix,neighbour,2026-11-05,15,15,3,,Kha15 An17 Gha26 Son26 | Sonnet subagent
+Q-129,Stage 5A Pass 2,I-003,undermind,early prediction resolved vs unresolved/wontfix,outcome,2026-11-05,15,15,2,,Pop25 Vie22b | Sonnet subagent
+Q-130,Stage 5A Pass 2,I-003,undermind,citations of Ruo24 (adversarial abstract),snowball,2026-11-05,9,9,1,,only Gha26 Bai26b tangential; nothing on unresolved | Sonnet subagent
+Q-131,Stage 5A Pass 2,I-003,undermind,syzbot cause bisection vs fix rate,bisect,2026-11-05,10,10,3,,Gu24 Bur24 Bai26b | Sonnet subagent
+Q-132,Stage 5A Pass 2,I-003,openalex,read: Ruo24 full text via pdftotext,fulltext,2026-11-05,1,1,1,,only resolved included | Sonnet subagent
+Q-133,Stage 5A Pass 2,I-001,OpenAlex-search,performance regression alert triage,perf alerts,2026-11-05,48,25,,,Sonnet subagent
+Q-134,Stage 5A Pass 2,I-001,OpenAlex-search,performance regression detection continuous integration false positive alerts,perf alerts,2026-11-05,10,10,,,Sonnet subagent
+Q-135,Stage 5A Pass 2,I-001,OpenAlex-search,perf sheriff performance alerts,perf alerts,2026-11-05,0,0,,,Sonnet subagent
+Q-136,Stage 5A Pass 2,I-001,OpenAlex-search,performance regression bisect culprit commit benchmark noise,perf alerts,2026-11-05,0,0,,,Sonnet subagent
+Q-137,Stage 5A Pass 2,I-001,OpenAlex-search,"""performance regression"" alerts triage",perf alerts,2026-11-05,86,12,,,Sonnet subagent
+Q-138,Stage 5A Pass 2,I-001,OpenAlex-search,"""performance regressions"" ""continuous integration"" noise",perf alerts,2026-11-05,154,12,,,Sonnet subagent
+Q-139,Stage 5A Pass 2,I-001,OpenAlex-search,performance regression sheriff Chromium,perf alerts,2026-11-05,63,12,,,Sonnet subagent
+Q-140,Stage 5A Pass 2,I-001,OpenAlex-search,"""performance regression"" Linux kernel benchmark bisect",perf alerts,2026-11-05,12,12,,,Sonnet subagent
+Q-141,Stage 5A Pass 2,I-001,OpenAlex-search,false positive performance regression alerts prioritization,perf alerts,2026-11-05,14263,12,,,Sonnet subagent
+Q-142,Stage 5A Pass 2,I-001,OpenAlex-search,"""change point detection"" performance testing CI",perf alerts,2026-11-05,1262,12,,,Sonnet subagent
+Q-143,Stage 5A Pass 2,I-001,OpenAlex-search,"""Linux kernel"" ""performance regression"" empirical study",neighbour,2026-11-05,81,12,,,Sonnet subagent
+Q-144,Stage 5A Pass 2,I-001,OpenAlex-search,"""kernel test robot"" OR ""0-day"" OR ""LKP"" performance",neighbour,2026-11-05,27146813,12,,,Sonnet subagent
+Q-145,Stage 5A Pass 2,I-001,OpenAlex-search,Linux kernel performance bugs empirical study,neighbour,2026-11-05,5470,12,,,Sonnet subagent
+Q-146,Stage 5A Pass 2,I-001,OpenAlex-search,"""performance regressions"" browser Firefox Chrome alerts",neighbour,2026-11-05,7,7,,,Sonnet subagent
+Q-147,Stage 5A Pass 2,I-001,OpenAlex-search,database performance regression testing alert noise developers,neighbour,2026-11-05,4289,12,,,Sonnet subagent
+Q-148,Stage 5A Pass 2,I-001,OpenAlex-search,LLVM compiler performance regression CI benchmarks noisy,neighbour,2026-11-05,43,12,,,Sonnet subagent
+Q-149,Stage 5A Pass 2,I-001,OpenAlex-search,JVM OR .NET performance regression detection benchmarks CI noise,neighbour,2026-11-05,17291,12,,,Sonnet subagent
+Q-150,Stage 5A Pass 2,I-001,OpenAlex-search,microbenchmark noise performance regression false alarms cloud,neighbour,2026-11-05,29,12,,,Sonnet subagent
+Q-151,Stage 5A Pass 2,I-001,OpenAlex-search,performance regression root cause commit ranking,neighbour,2026-11-05,7064,12,,,Sonnet subagent
+Q-152,Stage 5A Pass 2,I-001,arXiv,"all:""performance bugs"" AND all:""Linux kernel""",kernel perf bugs,2026-11-05,,10,,,Sonnet subagent
+Q-153,Stage 5A Pass 2,I-001,OpenAlex-cites,W3007460877,snowball,2026-11-05,49,12,,,Sonnet subagent
+Q-154,Stage 5A Pass 2,I-001,OpenAlex-cites,W4410049353,snowball,2026-11-05,2,2,,,Sonnet subagent
+Q-155,Stage 5A Pass 2,I-001,OpenAlex-cites,W2399881321,snowball,2026-11-05,40,12,,,Sonnet subagent
+Q-156,Stage 5A Pass 2,I-001,OpenAlex-cites,W7166743938,snowball,2026-11-05,0,0,,,Sonnet subagent
+Q-157,Stage 5A Pass 2,I-001,OpenAlex-cites,W3126244934,snowball,2026-11-05,24,12,,,Sonnet subagent
+Q-158,Stage 5A Pass 2,I-001,OpenAlex-search,Besbes Mozilla performance alerts,x,2026-11-05,5,5,,,Sonnet subagent
+Q-159,Stage 5A Pass 2,I-001,OpenAlex-cites,W3007460877,snowball,2026-11-05,49,49,,,Sonnet subagent
+Q-160,Stage 5A Pass 2,I-001,OpenAlex-cites,W2399881321,snowball,2026-11-05,40,40,,,Sonnet subagent
+Q-161,Stage 5A Pass 2,I-001,OpenAlex-cites,W3126244934,snowball,2026-11-05,24,24,,,Sonnet subagent
+Q-162,Stage 5A Pass 2,I-001,OpenAlex-cites,W4286239309,snowball,2026-11-05,1,1,,,Sonnet subagent
+Q-163,Stage 5A Pass 2,I-001,OpenAlex-cites,W7155388836,snowball,2026-11-05,0,0,,,Sonnet subagent
+Q-164,Stage 5A Pass 2,I-001,OpenAlex-search,Mozilla performance alerts Besbes dataset 2025 arXiv,x,2026-11-05,5,5,,,Sonnet subagent
+Q-165,Stage 5A Pass 2,I-001,OpenAlex-cites,W4286239570,snowball2,2026-11-05,2,2,,,Sonnet subagent
+Q-166,Stage 5A Pass 2,I-001,OpenAlex-cites,W4388893279,snowball2,2026-11-05,0,0,,,Sonnet subagent
+Q-167,Stage 5A Pass 2,I-001,OpenAlex-cites,W7148352033,snowball2,2026-11-05,0,0,,,Sonnet subagent
+Q-168,Stage 5A Pass 2,I-001,OpenAlex-cites,W7220960124,snowball2,2026-11-05,0,0,,,Sonnet subagent
+Q-169,Stage 5A Pass 2,I-001,OpenAlex-cites,W7155368055,snowball2,2026-11-05,0,0,,,Sonnet subagent
+Q-170,Stage 5A Pass 2,I-001,OpenAlex-cites,W7165122770,snowball2,2026-11-05,0,0,,,Sonnet subagent
+Q-171,Stage 5A Pass 2,I-001,OpenAlex-cites,W4225133069,snowball2,2026-11-05,5,5,,,Sonnet subagent
+Q-172,Stage 5A Pass 2,I-001,OpenAlex-cites,W4285804579,snowball2,2026-11-05,7,7,,,Sonnet subagent
+Q-173,Stage 5A Pass 2,I-001,OpenAlex-cites,W4361198584,snowball2,2026-11-05,6,6,,,Sonnet subagent
+Q-174,Stage 5A Pass 2,I-001,OpenAlex-cites,W4404400565,snowball2,2026-11-05,6,6,,,Sonnet subagent
+Q-175,Stage 5A Pass 2,I-001,OpenAlex-search,Hmissa Performance Alert Triage Time-Aware Learning Multi-Scale,known-item,2026-11-05,0,0,,,Sonnet subagent
+Q-176,Stage 5A Pass 2,I-001,OpenAlex-search,Tröpgen idle-power regressions Linux,known-item,2026-11-05,3,3,,,Sonnet subagent
+Q-177,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088134,performance regression,venue sweep 2023-2026,2026-11-05,44,30,,,Sonnet subagent
+Q-178,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088134,performance alerts,venue sweep 2023-2026,2026-11-05,16,16,,,Sonnet subagent
+Q-179,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088134,Linux kernel performance,venue sweep 2023-2026,2026-11-05,22,22,,,Sonnet subagent
+Q-180,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088134,benchmark noise CI,venue sweep 2023-2026,2026-11-05,2,2,,,Sonnet subagent
+Q-181,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088599,performance regression,venue sweep 2023-2026,2026-11-05,51,30,,,Sonnet subagent
+Q-182,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088599,performance alerts,venue sweep 2023-2026,2026-11-05,12,12,,,Sonnet subagent
+Q-183,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088599,Linux kernel performance,venue sweep 2023-2026,2026-11-05,9,9,,,Sonnet subagent
+Q-184,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088599,benchmark noise CI,venue sweep 2023-2026,2026-11-05,11,11,,,Sonnet subagent
+Q-185,Stage 5A Pass 2,I-001,OpenAlex-venue:S4210220341,performance regression,venue sweep 2023-2026,2026-11-05,8,8,,,Sonnet subagent
+Q-186,Stage 5A Pass 2,I-001,OpenAlex-venue:S4210220341,performance alerts,venue sweep 2023-2026,2026-11-05,9,9,,,Sonnet subagent
+Q-187,Stage 5A Pass 2,I-001,OpenAlex-venue:S4210220341,Linux kernel performance,venue sweep 2023-2026,2026-11-05,5,5,,,Sonnet subagent
+Q-188,Stage 5A Pass 2,I-001,OpenAlex-venue:S4210220341,benchmark noise CI,venue sweep 2023-2026,2026-11-05,0,0,,,Sonnet subagent
+Q-189,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088134,change point,venue sweep 2023-2026,2026-11-05,76,30,,,Sonnet subagent
+Q-190,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088134,triage,venue sweep 2023-2026,2026-11-05,8,8,,,Sonnet subagent
+Q-191,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088134,Mozilla,venue sweep 2023-2026,2026-11-05,3,3,,,Sonnet subagent
+Q-192,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088134,regression detection,venue sweep 2023-2026,2026-11-05,25,25,,,Sonnet subagent
+Q-193,Stage 5A Pass 2,I-001,OpenAlex-venue:S7407088134,false positive,venue sweep 2023-2026,2026-11-05,13,13,,,Sonnet subagent
+Q-194,Stage 5A Pass 2,I-001,OpenAlex-search,performance regression Linux kernel ICSME 2024 empirical,ICSME sweep,2026-11-05,96,40,,,Sonnet subagent
+Q-195,Stage 5A Pass 2,I-001,OpenAlex-venue:S4210174939,performance regression,venue sweep 2023-2026,2026-11-05,43,30,,,Sonnet subagent
+Q-196,Stage 5A Pass 2,I-001,OpenAlex-venue:S4210174939,performance alerts triage,venue sweep 2023-2026,2026-11-05,3,3,,,Sonnet subagent
+Q-197,Stage 5A Pass 2,I-001,OpenAlex-venue:S4210174939,Linux kernel regression,venue sweep 2023-2026,2026-11-05,4,4,,,Sonnet subagent
+Q-198,Stage 5A Pass 2,I-001,OpenAlex-venue:S4210174939,benchmark noise,venue sweep 2023-2026,2026-11-05,31,30,,,Sonnet subagent
+Q-199,Stage 5A Pass 2,I-001,OpenAlex-search,Linux kernel test robot performance regression reports maintainers,adversarial/neighbour,2026-11-05,1722,40,,,Sonnet subagent
+Q-200,Stage 5A Pass 2,I-001,OpenAlex-search,0-day CI kernel performance regression reports actionable,adversarial/neighbour,2026-11-05,1068,40,,,Sonnet subagent
+Q-201,Stage 5A Pass 2,I-001,OpenAlex-search,LKP lkp-tests Linux kernel performance,adversarial/neighbour,2026-11-05,21,21,,,Sonnet subagent
+Q-202,Stage 5A Pass 2,I-001,OpenAlex-search,performance regression reports acted upon predict maintainers fix revert,adversarial/neighbour,2026-11-05,2627,40,,,Sonnet subagent
+Q-203,Stage 5A Pass 2,I-001,OpenAlex-search,regression report triage precision@k ranker interpretable perf-profile,adversarial/neighbour,2026-11-05,0,0,,,Sonnet subagent
+Q-204,Stage 5A Pass 2,I-001,OpenAlex-search,Chromium perf dashboard alerts sheriff bug triage,adversarial/neighbour,2026-11-05,1,1,,,Sonnet subagent
+Q-205,Stage 5A Pass 2,I-001,OpenAlex-search,LLVM performance regression noise benchmarks LNT,adversarial/neighbour,2026-11-05,0,0,,,Sonnet subagent
+Q-206,Stage 5A Pass 2,I-001,Undermind-search_papers,"We study performance regression reports automatically generated by a continuous benchmarking robot for the Linux kernel ... act on, fix, ignore",kernel perf robot actionability,2026-11-05,20,20,3,,"Ruo24,Tia26,Say26 kept as partial | Sonnet subagent"
+Q-207,Stage 5A Pass 2,I-001,Undermind-search_papers,train a classifier to predict which performance alerts raised by change point detection in CI are true positives developers act on,alert triage ML,2026-11-05,20,20,6,,"Che22,Hmi26,Bau22,Hab21,Say26,Dal20 kept | Sonnet subagent"
+Q-208,Stage 5A Pass 2,I-001,Undermind-search_papers,empirically study Intel 0-day kernel test robot (LKP) performance regression reports on LKML ... acknowledged/fixed/reverted/disputed/ignored,kernel test robot,2026-11-05,15,15,1,,no paper studies robot reports; Ruo24 regzbot only | Sonnet subagent
+Q-209,Stage 5A Pass 2,I-001,Undermind-search_papers,empirical study of performance bugs in the Linux kernel ... mailing list and bug trackers,kernel perf bugs,2026-11-05,15,15,2,,Hua26 JSS found (abstract unavailable); Cam25 | Sonnet subagent
+Q-210,Stage 5A Pass 2,I-001,Undermind-search_papers,"ADVERSARIAL: robot reports labelled fixed/reverted/disputed/ignored; effect size vs stddev, #benchmarks, perf-profile overlap; interpretable ranker beats robot order and %change threshold at P@k",adversarial abstract,2026-11-05,15,15,2,,"nothing matching; closest Hmi26,Tia26 | Sonnet subagent"
+Q-211,Stage 5A Pass 2,I-001,Undermind-search_papers,"Chromium performance sheriffs triage perf dashboard alerts ... which alerts filed as bugs, noise, wontfix",browser sheriff,2026-11-05,12,12,2,,"Bes25,Hmi26; no Chromium perf alert paper | Sonnet subagent"
+Q-212,Stage 5A Pass 2,I-001,Undermind-search_papers,"LLVM/GCC continuous benchmarking bots: reported regressions real vs noise, alignment effects, developer response",compiler bots,2026-11-05,12,12,0,,nothing relevant | Sonnet subagent
+Q-213,Stage 5A Pass 2,I-001,Undermind-get_paper_info,Hua26 DOI 10.1016/j.jss.2026.112996,Huang JSS,2026-11-05,1,1,1,,Abstract unavailable | Sonnet subagent
+Q-214,Stage 5A Pass 2,I-001,Crossref/SemanticScholar/OpenAlex/arXiv,"Huang JSS 2026 abstract/preprint (crossref abstract null; S2 abstract null; OpenAlex no inverted index, closed; arXiv ti/abs search 0 hits; sciencedirect 403)",Huang JSS,2026-11-05,0,0,0,,no preprint or abstract found | Sonnet subagent
+Q-215,Stage 5A Pass 2,I-001,WebSearch,Demystifying performance bugs in large-scale infrastructure software Linux kernel Huang Xuan abstract,Huang JSS,2026-11-05,7,7,0,,not indexed | Sonnet subagent
+Q-216,Stage 5A Pass 2,I-001,WebSearch,Xi Huang Jifeng Xuan Wuhan University Linux kernel performance bugs study 2026,Huang JSS,2026-11-05,10,10,0,,not found | Sonnet subagent
+Q-217,Stage 5A Pass 2,I-001,WebFetch,doi.org/10.1016/j.jss.2026.112996 -> linkinghub.elsevier.com,Huang JSS,2026-11-05,1,1,0,,Redirecting only; paywall | Sonnet subagent
+Q-218,Stage 5A Pass 2,I-001,OpenAlex-cites,"round1 cites: Daly2020 W3007460877 (49), Luo2016 W2399881321 (40), Daly2021 W3126244934 (24), Besbes2025 W4410049353 (2), Tian2026 W7166743938 (0), Chen2022 W4286239309 (1)",snowball r1,2026-11-05,116,116,6,,"kept Chen22/SCP23,Bau22,Hmi26,DiMenna26,Ocariza22,Leznik22,Fleming23,Lategan26,Trubin26 | Sonnet subagent"
+Q-219,Stage 5A Pass 2,I-001,OpenAlex-cites,"round2 cites: Bauer2022 (2), ChenSCP2023 (0), Sayedsalehi (0), Costa (0), DiMenna (0), Besbes2606 (0), Ocariza2022 (5), Leznik2022 (7), Fleming2023 (6), Yoon FBDetect (6)",snowball r2,2026-11-05,26,26,3,,"added Tropgen25 idle-power Linux, Trubin26, Lategan26; round3 not needed: no new relevant | Sonnet subagent"
+Q-220,Stage 5A Pass 2,I-001,LKP repo,git clone github.com/intel/lkp-tests; grep stats.rb/compare.rb/noise.rb/doc/faq.md,tool search,2026-11-05,1,1,1,,pre-report gates only; no outcome-based ranker | Sonnet subagent
+Q-221,Stage 5A Pass 2,I-001,WebSearch,kernel test robot performance regression report noise OR false positive OR code alignment maintainers complain,practice,2026-11-05,10,10,2,,Hansen 2024 noise; Gleixner 2021; Torvalds 2017 (snippets) | Sonnet subagent
+Q-222,Stage 5A Pass 2,I-001,WebFetch,lkml.iu.edu/hypermail/linux/kernel/2403.0/03148.html,practice,2026-11-05,1,1,1,,quote verified | Sonnet subagent
+Q-223,Stage 5A Pass 2,I-001,WebFetch,lore.kernel.org/lkml/87czufo6xk.ffs@nanos.tec.linutronix.de/,practice,2026-11-05,1,0,0,,403; only search snippet | Sonnet subagent
+Q-224,Stage 5A Pass 2,I-001,WebSearch,KernelCI regressions detection confidence flaky filtering regression tracking,practice,2026-11-05,7,7,2,,Collabora KernelCI regressions tracker (flaky tag); LPC 2023/2024 talks (snippets only) | Sonnet subagent
+Q-225,Stage 5A Pass 2,I-001,Undermind-read_pdfs,"Say26,Hab21,Ruo24,Tia26 full-text methods/results",fulltext,2026-11-05,4,4,4,,Sonnet subagent
+Q-226,Stage 5A Pass 2,I-001,Undermind-read_pdfs,"Bes26,Bes25,Dal20,Bel22 full-text",fulltext,2026-11-05,4,4,4,,Sonnet subagent
+Q-227,Stage 5A Pass 2,I-001,ACM DL,"dl.acm.org/doi/pdf and fullHtml for Hmissa 3777911.3800694, Chen 3491204.3527487, Bauer 3491204.3527486",fulltext attempt,2026-11-05,3,0,0,,403; abstracts only via OpenAlex | Sonnet subagent
+Q-228,Stage 5A Pass 2,I-001,arXiv,"id_list=2503.16332,2604.00222,2610.09023,2606.18377",known-item,2026-11-05,4,4,4,,2503.16332 = Besbes Mozilla dataset | Sonnet subagent
+Q-229,Stage 5A Pass 2,I-001,arXiv,"all:""alert triage"" AND all:performance",synonym,2026-11-05,8,8,0,,security alerts only | Sonnet subagent
+Q-230,Stage 5A Pass 2,I-001,OpenAlex-venue,"ICPE S7407088134 / MSR S7407088599 / ISSRE S4210220341 / ICSME(ICSM) S4210174939, 2023-2026, queries: performance regression; performance alerts; Linux kernel performance; benchmark noise CI; change point; triage; Mozilla; regression detection; false positive",venue sweep,2026-11-05,~290,~330,6,,"ICPE: Hmi26,DiMenna26,Trubin26,Bes25,Fleming23; ICSME: BIPeC (Lyu24); MSR/ISSRE: none relevant | Sonnet subagent"

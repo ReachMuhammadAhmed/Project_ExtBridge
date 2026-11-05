@@ -1,0 +1,5 @@
+# merged_probe.py (run 2026-11-05): robot perf-regression reports since 2016-06; did the blamed commit's subject later appear in mainline (subject match against mainline since 2016)?
+('dev', 'merged') 125
+('dev', 'no subject parsed') 644   <- older report formats not parsed yet
+('dev', 'not in mainline') 43     <- candidate 'patch dropped' outcome (needs manual check; rebased/renamed patches look like 'not in mainline')
+('mainline', 'merged') 153

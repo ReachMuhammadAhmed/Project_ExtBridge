@@ -1,0 +1,13 @@
+# robot_tags.py (run 2026-11-05, mainline 2015-12-22..2026-11-03)
+year | commits with "Reported-by: kernel test robot" | of which with a lore Link:/Closes: tag
+2016 | 17 | 0
+2017 | 40 | 0
+2018 | 30 | 0
+2019 | 44 | 4
+2020 | 589 | 237
+2021 | 1109 | 561
+2022 | 1103 | 584
+2023 | 900 | 802
+2024 | 667 | 650
+2025 | 679 | 673
+2026 | 457 | 442
