@@ -1,0 +1,5 @@
+# dup_probe.py (run 2026-11-05)
+robot root messages 7785 with "<hash>: <signature>" subject 6769
+distinct blamed commits 6517 with >1 separate root report 226 reports on such commits 478
+non-perf signatures 2635 blamed on >1 distinct commit 598 reports involved 2951
+perf reports that already list other affected tests (robot-side grouping) 479

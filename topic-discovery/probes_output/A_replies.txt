@@ -1,0 +1,11 @@
+# reply_kw.py (run 2026-11-05)
+human replies 1061 threads (regression reports with a human reply) 410
+  noise/noisy: 21 threads (5%)
+  alignment: 15 threads (4%)
+  cannot reproduce: 15 threads (4%)
+  unrelated/nothing to do: 12 threads (3%)
+  false positive: 5 threads (1%)
+  revert: 32 threads (8%)
+  fix/patch: 214 threads (52%)
+  thanks/thank: 215 threads (52%)
+  expected/intended: 64 threads (16%)

@@ -1,0 +1,16 @@
+# label_perf.py (run 2026-11-05)
+mainline commits 932668 2015-12-22 .. 2026-11-03
+all regression reports: n=979 cited=70 reverted=13 strong(cited|reverted)=73 fixes_tag_on_blamed=205 any_human_reply=410
+  2016: n=61 cited=0 reverted=0 strong(cited|reverted)=0 fixes_tag_on_blamed=2 any_human_reply=19
+  2017: n=92 cited=0 reverted=1 strong(cited|reverted)=1 fixes_tag_on_blamed=10 any_human_reply=26
+  2018: n=82 cited=0 reverted=2 strong(cited|reverted)=2 fixes_tag_on_blamed=15 any_human_reply=36
+  2019: n=118 cited=2 reverted=0 strong(cited|reverted)=2 fixes_tag_on_blamed=14 any_human_reply=37
+  2020: n=112 cited=3 reverted=0 strong(cited|reverted)=3 fixes_tag_on_blamed=23 any_human_reply=42
+  2021: n=136 cited=16 reverted=3 strong(cited|reverted)=16 fixes_tag_on_blamed=27 any_human_reply=67
+  2022: n=66 cited=6 reverted=1 strong(cited|reverted)=6 fixes_tag_on_blamed=18 any_human_reply=39
+  2023: n=76 cited=13 reverted=2 strong(cited|reverted)=13 fixes_tag_on_blamed=25 any_human_reply=39
+  2024: n=102 cited=14 reverted=2 strong(cited|reverted)=14 fixes_tag_on_blamed=28 any_human_reply=48
+  2025: n=86 cited=8 reverted=1 strong(cited|reverted)=8 fixes_tag_on_blamed=30 any_human_reply=36
+  2026: n=48 cited=8 reverted=1 strong(cited|reverted)=8 fixes_tag_on_blamed=13 any_human_reply=21
+regressions on linus:master: n=153 cited=24 reverted=4 strong(cited|reverted)=24 fixes_tag_on_blamed=68 any_human_reply=81
+improvement reports: n=749 cited=6 reverted=1 strong(cited|reverted)=7 fixes_tag_on_blamed=121 any_human_reply=65

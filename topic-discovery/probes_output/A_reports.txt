@@ -1,0 +1,6 @@
+# parse_lkp.py summary (run 2026-11-05)
+messages 20537 robot-sent 8474 replies 11234
+robot performance reports 1728 {'improvement': 749, 'regression': 979}
+by year {'2016': 102, '2017': 151, '2018': 124, '2019': 178, '2020': 208, '2021': 237, '2022': 127, '2023': 142, '2024': 190, '2025': 160, '2026': 109}
+with blamed commit 1664 | %stddev table 1674 | perf-profile lines 1398 | Closes: request 288
+top tested branches [('linus:master', 312), ('lkp-robot', 222), ('linux-next:master', 107), ('sched/fair', 83), ('mm', 74), ('xfs', 61)]

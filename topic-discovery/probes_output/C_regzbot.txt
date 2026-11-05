@@ -1,0 +1,8 @@
+# regzbot pages fetched 2026-11-04 22:56 UTC; regzbot_summary.py (run 2026-11-05)
+rz_resolved.html entries 2186 culprit commit in first column 376 version range 377 neither (parse unknown) 1433
+   resolution kind {'commit': 1334, 'none': 642, 'revert': 210} channel {'lore': 1362, 'github': 19, 'bugzilla': 708, 'gitlab': 97}
+rz_inconclusive.html entries 287 culprit commit in first column 36 version range 131 neither (parse unknown) 120
+   resolution kind {'none': 287} channel {'bugzilla': 99, 'lore': 171, 'gitlab': 17}
+culprit known resolved 376 inconclusive 36 inconclusive share 8.7%
+culprit not shown resolved 1810 inconclusive 251 inconclusive share 12.2%
+resolved entries with a fix matched via Link/Closes tag 490 | with a manual "fix:" regzbot command 1562 (heuristic; categories can overlap)

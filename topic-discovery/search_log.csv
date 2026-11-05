@@ -1,1 +1,87 @@
 query_id,stage,candidate,source,query_string,synonym_set,date,hits,screened,kept,kept_ids,notes
+Q-001,Stage 5A Pass 1,I-001,OpenAlex,Linux kernel performance regression testing LKP 0-day will-it-scale,kernel perf,2026-11-05,3,8,,,run by Sonnet subagent; logged by AI
+Q-002,Stage 5A Pass 1,I-001,OpenAlex,performance regression detection continuous integration,kernel perf,2026-11-05,384503,8,,,kept 2020 Mozilla/MongoDB CPD papers | run by Sonnet subagent; logged by AI
+Q-003,Stage 5A Pass 1,I-001,OpenAlex,performance alert triage false positive Mozilla Perfherder,alert triage,2026-11-05,3,8,,,"kept 2606.18377, 2604.00222 | run by Sonnet subagent; logged by AI"
+Q-004,Stage 5A Pass 1,I-001,OpenAlex,change point detection performance testing MongoDB,alert triage,2026-11-05,5111,8,,,kept MongoDB/Hunter | run by Sonnet subagent; logged by AI
+Q-005,Stage 5A Pass 1,I-001,OpenAlex,benchmark noise performance variability cloud,noise,2026-11-05,46267,8,,,"kept Duet, Noise in the Clouds (peripheral) | run by Sonnet subagent; logged by AI"
+Q-006,Stage 5A Pass 1,I-001,OpenAlex,performance regression root cause blamed commit,rootcause,2026-11-05,3584,8,,,run by Sonnet subagent; logged by AI
+Q-007,Stage 5A Pass 1,I-001,OpenAlex,automated bisection regression culprit commit,bisect,2026-11-05,21,8,,,kept 2610.02995 | run by Sonnet subagent; logged by AI
+Q-008,Stage 5A Pass 1,I-001,OpenAlex,actionable alert identification static analysis warnings,actionable,2026-11-05,6281,8,,,neighbouring field; kept 3 | run by Sonnet subagent; logged by AI
+Q-009,Stage 5A Pass 1,I-001,OpenAlex,invalid bug report prediction,invalid report,2026-11-05,6254,8,,,neighbouring field; kept 3 | run by Sonnet subagent; logged by AI
+Q-010,Stage 5A Pass 1,I-001,OpenAlex,Linux kernel test robot bug reports empirical study,kernel robot,2026-11-05,555,8,,,no direct hit; OpenAlex search poor on this phrasing | run by Sonnet subagent; logged by AI
+Q-011,Stage 5A Pass 1,I-001,OpenAlex,Intel 0-day kernel test robot performance regression,kernel perf,2026-11-05,2603,8,,,noise (robot/regression false matches) | run by Sonnet subagent; logged by AI
+Q-012,Stage 5A Pass 1,I-001,OpenAlex,will-it-scale fxmark kernel patch performance regression study,kernel perf,2026-11-05,0,8,,,0 hits | run by Sonnet subagent; logged by AI
+Q-013,Stage 5A Pass 1,I-001,OpenAlex,Linux kernel performance regressions evolution empirical,kernel perf,2026-11-05,3384,8,,,kept 2411.02091 | run by Sonnet subagent; logged by AI
+Q-014,Stage 5A Pass 1,I-001,OpenAlex,performance regression alerts prioritization developers respond,alert triage,2026-11-05,3958,8,,,run by Sonnet subagent; logged by AI
+Q-015,Stage 5A Pass 1,I-001,OpenAlex,performance microbenchmark variability detect regressions unreliable results,noise,2026-11-05,46,8,,,run by Sonnet subagent; logged by AI
+Q-016,Stage 5A Pass 1,I-001,OpenAlex,performance regression root cause analysis code changes profile,rootcause,2026-11-05,80082,8,,,run by Sonnet subagent; logged by AI
+Q-017,Stage 5A Pass 1,I-001,OpenAlex,bisection performance regression noisy benchmark,bisect,2026-11-05,1002,8,,,run by Sonnet subagent; logged by AI
+Q-018,Stage 5A Pass 1,I-001,OpenAlex,actionable alerts continuous integration performance bug report fix,actionable,2026-11-05,1234,8,,,run by Sonnet subagent; logged by AI
+Q-019,Stage 5A Pass 1,I-001,OpenAlex,kernel patch regression reports Reported-by linux-kernel mailing list,kernel robot,2026-11-05,414,8,,,run by Sonnet subagent; logged by AI
+Q-020,Stage 5A Pass 1,I-001,OpenAlex,performance regressions commits industrial study Google Meta detection,rootcause,2026-11-05,1328,8,,,run by Sonnet subagent; logged by AI
+Q-021,Stage 5A Pass 1,I-001,arXiv,"all:""performance regression"" AND all:""Linux kernel""",kernel perf,2026-11-05,1,8,,,run by Sonnet subagent; logged by AI
+Q-022,Stage 5A Pass 1,I-001,arXiv,"all:""0-day"" AND all:kernel AND all:performance",kernel robot,2026-11-05,1,8,,,run by Sonnet subagent; logged by AI
+Q-023,Stage 5A Pass 1,I-001,arXiv,"all:""performance regression"" AND (all:alert OR all:triage OR all:""false positive"")",alert triage,2026-11-05,8,8,,,run by Sonnet subagent; logged by AI
+Q-024,Stage 5A Pass 1,I-001,arXiv,"all:""performance"" AND all:benchmark AND all:noise AND all:regression",noise,2026-11-05,202,8,,,run by Sonnet subagent; logged by AI
+Q-025,Stage 5A Pass 1,I-001,arXiv,"all:""change point"" AND all:performance AND all:regression",changepoint,2026-11-05,74,8,,,run by Sonnet subagent; logged by AI
+Q-026,Stage 5A Pass 1,I-001,arXiv,"all:""performance regression"" AND (all:""root cause"" OR all:bisect OR all:culprit)",rootcause,2026-11-05,5,8,,,run by Sonnet subagent; logged by AI
+Q-027,Stage 5A Pass 1,I-001,arXiv,"all:""performance"" AND all:alerts AND all:actionable",actionable,2026-11-05,81,8,,,run by Sonnet subagent; logged by AI
+Q-028,Stage 5A Pass 1,I-001,arXiv,"all:""kernel"" AND all:""performance regressions"" AND all:""bug reports""",kernel perf,2026-11-05,0,8,,,run by Sonnet subagent; logged by AI
+Q-029,Stage 5A Pass 1,I-001,arXiv,id_list=2605.07678,item1a,2026-11-05,1,1,1,,"found: Tian et al FSE 2026, false-positive kernel bug reports | run by Sonnet subagent; logged by AI"
+Q-030,Stage 5A Pass 1,I-001,OpenAlex,Linux kernel performance bugs empirical study (from 2025-06),item1b,2026-11-05,1112,8,1,,found JSS 10.1016/j.jss.2026.112996 | run by Sonnet subagent; logged by AI
+Q-031,Stage 5A Pass 1,I-001,Crossref,query.bibliographic=Linux kernel performance bugs (2026),item1b,2026-11-05,n/a,8,1,,confirmed DOI; no abstract in Crossref/OpenAlex/S2; sciencedirect page gave no abstract | run by Sonnet subagent; logged by AI
+Q-032,Stage 5A Pass 1,I-001,Scholar_Feed,Linux kernel test robot performance regression reports 0-day,mixed,2026-11-05,0,0,0,,HTTP 503 service error; no results (retried) | run by Sonnet subagent; logged by AI
+Q-033,Stage 5A Pass 1,I-001,Scholar_Feed,performance alert triage actionable vs false positive alerts regression detection,mixed,2026-11-05,0,0,0,,HTTP 503 service error; no results (retried) | run by Sonnet subagent; logged by AI
+Q-034,Stage 5A Pass 1,I-001,Scholar_Feed,benchmark variability noise flaky performance tests regression detection,mixed,2026-11-05,0,0,0,,HTTP 503 service error; no results (retried) | run by Sonnet subagent; logged by AI
+Q-035,Stage 5A Pass 1,I-001,Scholar_Feed,performance regression alerts Mozilla change point,mixed,2026-11-05,0,0,0,,HTTP 503 service error; no results (retried) | run by Sonnet subagent; logged by AI
+Q-036,Stage 5A Pass 1,I-002,OpenAlex,duplicate bug report detection,dup bug report,2026-11-05,26975,8,0,,generic DBRD; background only | run by Sonnet subagent; logged by AI
+Q-037,Stage 5A Pass 1,I-002,OpenAlex,crash report deduplication stack trace similarity,crash dedup,2026-11-05,288,8,4,,TraceSim/Karasov/Igor/GPTrace | run by Sonnet subagent; logged by AI
+Q-038,Stage 5A Pass 1,I-002,OpenAlex,syzbot syzkaller crash deduplication,syzbot,2026-11-05,9,8,3,,Mu NDSS22; SyzRetrospector; SoK | run by Sonnet subagent; logged by AI
+Q-039,Stage 5A Pass 1,I-002,OpenAlex,kernel oops clustering,kernel oops,2026-11-05,379,8,0,,noisy | run by Sonnet subagent; logged by AI
+Q-040,Stage 5A Pass 1,I-002,OpenAlex,continuous integration test failure clustering triage,CI triage,2026-11-05,11023,8,2,,BuildSheriff; HyTri | run by Sonnet subagent; logged by AI
+Q-041,Stage 5A Pass 1,I-002,OpenAlex,Linux kernel test robot regression reports,test robot,2026-11-05,2314,8,1,,Acher TuxML build failures | run by Sonnet subagent; logged by AI
+Q-042,Stage 5A Pass 1,I-002,OpenAlex,0-day kernel test robot Intel,test robot,2026-11-05,5314,8,0,,robotics noise | run by Sonnet subagent; logged by AI
+Q-043,Stage 5A Pass 1,I-002,OpenAlex,log-based failure clustering test failures,log clustering,2026-11-05,340579,8,2,,Abbas LogGrouper (via arXiv); Clustering of Test Failures | run by Sonnet subagent; logged by AI
+Q-044,Stage 5A Pass 1,I-002,OpenAlex,flaky test failure grouping root cause,flaky,2026-11-05,248,8,0,,flaky detection not report dedup | run by Sonnet subagent; logged by AI
+Q-045,Stage 5A Pass 1,I-002,OpenAlex,bisection regression culprit commit Linux kernel,bisect,2026-11-05,10,8,0,,BISCEPTER found via arXiv | run by Sonnet subagent; logged by AI
+Q-046,Stage 5A Pass 1,I-002,arXiv,"all:""duplicate"" AND all:""bug report"" AND all:""Linux kernel""",dup bug report,2026-11-05,0,0,0,,no results | run by Sonnet subagent; logged by AI
+Q-047,Stage 5A Pass 1,I-002,arXiv,all:syzbot AND all:crash,syzbot,2026-11-05,3,3,1,,SoK 2609.23218 | run by Sonnet subagent; logged by AI
+Q-048,Stage 5A Pass 1,I-002,arXiv,"all:""crash deduplication"" OR all:""crash bucketing""",crash dedup,2026-11-05,3,3,2,,GPTrace; Stack Trace Transformer | run by Sonnet subagent; logged by AI
+Q-049,Stage 5A Pass 1,I-002,arXiv,"all:""test failure"" AND all:clustering AND all:""continuous integration""",CI clustering,2026-11-05,0,0,0,,no results | run by Sonnet subagent; logged by AI
+Q-050,Stage 5A Pass 1,I-002,arXiv,"all:""kernel test robot"" OR all:""0-day"" AND all:regression AND all:Linux",test robot,2026-11-05,0,0,0,,no results | run by Sonnet subagent; logged by AI
+Q-051,Stage 5A Pass 1,I-002,arXiv,"all:""Linux kernel"" AND all:""bug reports"" AND all:duplicate",dup bug report,2026-11-05,0,0,0,,no results | run by Sonnet subagent; logged by AI
+Q-052,Stage 5A Pass 1,I-002,arXiv,"all:""kernel"" AND all:""regression"" AND all:""bisection""",bisect,2026-11-05,4,4,1,,BISCEPTER 2610.02995 | run by Sonnet subagent; logged by AI
+Q-053,Stage 5A Pass 1,I-002,arXiv,"all:""failure"" AND all:""log"" AND all:clustering AND all:""test""",log clustering,2026-11-05,17,8,1,,LogGrouper 2301.03450 | run by Sonnet subagent; logged by AI
+Q-054,Stage 5A Pass 1,I-002,Scholar_Feed,deduplicating Linux kernel bug reports syzbot crash reports,syzbot,2026-11-05,0,0,0,,HTTP 503 | run by Sonnet subagent; logged by AI
+Q-055,Stage 5A Pass 1,I-002,Scholar_Feed,grouping CI test failures by root cause log clustering,CI triage,2026-11-05,0,0,0,,HTTP 503 | run by Sonnet subagent; logged by AI
+Q-056,Stage 5A Pass 1,I-002,Scholar_Feed,Linux kernel duplicate bug reports,dup bug report,2026-11-05,0,0,0,,HTTP 503 (service unavailable; 3 attempts) | run by Sonnet subagent; logged by AI
+Q-057,Stage 5A Pass 1,I-002,WebSearch,"""Most of the test regressions may be duplicates to each other"" 0day",practice,2026-11-05,7,7,1,,lkml 1703.1/00436 | run by Sonnet subagent; logged by AI
+Q-058,Stage 5A Pass 1,I-002,WebSearch,syzbot duplicate reports kernel developers,practice,2026-11-05,7,7,1,,NDSS page; syzkaller docs | run by Sonnet subagent; logged by AI
+Q-059,Stage 5A Pass 1,I-002,WebSearch,syzbot maintainers duplicate bug reports LWN,practice,2026-11-05,10,10,1,,LWN 917762 | run by Sonnet subagent; logged by AI
+Q-060,Stage 5A Pass 1,I-002,WebSearch,kernel test robot report duplicate already reported,practice,2026-11-05,16,16,1,,lkml 2102.0/00339 | run by Sonnet subagent; logged by AI
+Q-061,Stage 5A Pass 1,I-003,OpenAlex,regzbot,regzbot,2026-11-05,1,1,1,,Ruohonen 2024 only | run by Sonnet subagent; logged by AI
+Q-062,Stage 5A Pass 1,I-003,OpenAlex,linux kernel regression,,2026-11-05,17053,8,1,,top8 mostly irrelevant; Tropgen idle-power regressions noted | run by Sonnet subagent; logged by AI
+Q-063,Stage 5A Pass 1,I-003,OpenAlex,regression bug tracking linux,,2026-11-05,4404,8,2,,Tian 2026 false-positive reports; Starovoytov 2023 hot bugs | run by Sonnet subagent; logged by AI
+Q-064,Stage 5A Pass 1,I-003,OpenAlex,SZZ linux kernel bug-introducing,SZZ,2026-11-05,92,8,3,,Lyu 2024; Risse 2026; Kondo 2026 | run by Sonnet subagent; logged by AI
+Q-065,Stage 5A Pass 1,I-003,OpenAlex,Fixes tag linux kernel,Fixes: tag,2026-11-05,4899,8,2,,Li 2024 patch porting; Lyu | run by Sonnet subagent; logged by AI
+Q-066,Stage 5A Pass 1,I-003,OpenAlex,bisection regression linux,bisect,2026-11-05,680,8,2,,Gao BISCEPTER 2026; Wang ABACI 2026 | run by Sonnet subagent; logged by AI
+Q-067,Stage 5A Pass 1,I-003,OpenAlex,bug report response time linux kernel,,2026-11-05,7155,8,0,,fuzzing noise | run by Sonnet subagent; logged by AI
+Q-068,Stage 5A Pass 1,I-003,OpenAlex,abandoned unresolved bug reports,,2026-11-05,1273,8,1,,Saeidi 2025 npm responsiveness (non-kernel) | run by Sonnet subagent; logged by AI
+Q-069,Stage 5A Pass 1,I-003,arXiv,all:regzbot,,2026-11-05,1,1,1,,2411.02091 | run by Sonnet subagent; logged by AI
+Q-070,Stage 5A Pass 1,I-003,arXiv,"all:""linux kernel"" AND all:regression AND all:bug",,2026-11-05,5,5,2,,2411.02091; 2610.02995 | run by Sonnet subagent; logged by AI
+Q-071,Stage 5A Pass 1,I-003,arXiv,"all:""Fixes tag"" AND all:linux",,2026-11-05,1,1,1,,2402.05212 | run by Sonnet subagent; logged by AI
+Q-072,Stage 5A Pass 1,I-003,arXiv,all:SZZ AND all:linux,,2026-11-05,3,3,3,,2308.05060; 2604.02665; 2603.29378 | run by Sonnet subagent; logged by AI
+Q-073,Stage 5A Pass 1,I-003,arXiv,"all:""regression bug"" AND all:tracking",,2026-11-05,1,1,1,,2411.02091 | run by Sonnet subagent; logged by AI
+Q-074,Stage 5A Pass 1,I-003,arXiv,"all:""unresolved bug reports"" AND all:kernel",,2026-11-05,0,0,0,,run by Sonnet subagent; logged by AI
+Q-075,Stage 5A Pass 1,I-003,Scholar_Feed,Linux kernel regressions regzbot tracking,,2026-11-05,0,0,0,,HTTP 503 | run by Sonnet subagent; logged by AI
+Q-076,Stage 5A Pass 1,I-003,Scholar_Feed,Linux kernel regression bugs empirical study (semantic),,2026-11-05,0,0,0,,HTTP 503 | run by Sonnet subagent; logged by AI
+Q-077,Stage 5A Pass 1,I-003,Scholar_Feed,bug-introducing commit Fixes tag Linux kernel,,2026-11-05,0,0,0,,HTTP 503 | run by Sonnet subagent; logged by AI
+Q-078,Stage 5A Pass 1,I-003,Scholar_Feed,Linux kernel regression bugs empirical study (keyword),,2026-11-05,0,0,0,,empty result | run by Sonnet subagent; logged by AI
+Q-079,Stage 5A Pass 1,I-003,Scholar_Feed,regression tracking Linux kernel bug reports culprit commit,,2026-11-05,0,0,0,,HTTP 503 | run by Sonnet subagent; logged by AI
+Q-080,Stage 5A Pass 1,I-003,WebSearch,lwn regzbot regression tracking Leemhuis,,2026-11-05,7,4,4,,LWN 990599/908324/737666/957252 | run by Sonnet subagent; logged by AI
+Q-081,Stage 5A Pass 1,I-004,OpenAlex,issue commit link recovery,link recovery,2026-11-05,127675,5,4,,run by AI (main session)
+Q-082,Stage 5A Pass 1,I-004,OpenAlex,missing links between bug reports and commits,link recovery,2026-11-05,6341,5,4,,run by AI (main session)
+Q-083,Stage 5A Pass 1,I-004,OpenAlex,traceability bug report fix commit recovery,traceability,2026-11-05,2589,5,0,,run by AI (main session)
+Q-084,Stage 5A Pass 1,I-004,OpenAlex,mailing list patch commit tracking Linux kernel,Linux patch tracking,2026-11-05,753,5,0,,run by AI (main session)
+Q-085,Stage 5A Pass 1,I-004,OpenAlex,Linux kernel regression report fix link,kernel regression links,2026-11-05,2705,5,0,,run by AI (main session)
+Q-086,Stage 5A Pass 1,I-004,OpenAlex,Closes tag Link tag Linux commit report,kernel tags,2026-11-05,3488,5,0,,run by AI (main session)
