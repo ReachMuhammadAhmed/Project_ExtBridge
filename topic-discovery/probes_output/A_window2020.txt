@@ -1,0 +1,3 @@
+# window_split.py (run 2026-11-05)
+2020+ regression reports 626 | strong positives 68 | threads with human reply 292 | no reply 334
+time split 70/30: train 438 test 188 | test positives 24 | test starts 2024-07-02
